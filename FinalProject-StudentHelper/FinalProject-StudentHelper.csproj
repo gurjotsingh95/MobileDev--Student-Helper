@@ -112,7 +112,7 @@
     <AndroidResource Include="Resources\layout\SignUpTabA.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\SignUpTabB.axml">
+    <AndroidResource Include="Resources\layout\SignUpTabB.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

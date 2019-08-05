@@ -3535,8 +3535,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a00c0
 			public const int loginBtnID = 2131361984;
 			
-			// aapt resource value: 0x7f0a00c9
-			public const int masked = 2131361993;
+			// aapt resource value: 0x7f0a00ca
+			public const int masked = 2131361994;
 			
 			// aapt resource value: 0x7f0a009c
 			public const int message = 2131361948;
@@ -3612,6 +3612,9 @@ namespace FinalProject_StudentHelper
 			
 			// aapt resource value: 0x7f0a00c7
 			public const int register = 2131361991;
+			
+			// aapt resource value: 0x7f0a00c8
+			public const int relativeContainer = 2131361992;
 			
 			// aapt resource value: 0x7f0a0055
 			public const int right = 2131361877;
@@ -3835,8 +3838,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a001b
 			public const int view_offset_helper = 2131361819;
 			
-			// aapt resource value: 0x7f0a00c8
-			public const int visible = 2131361992;
+			// aapt resource value: 0x7f0a00c9
+			public const int visible = 2131361993;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int withText = 2131361859;
