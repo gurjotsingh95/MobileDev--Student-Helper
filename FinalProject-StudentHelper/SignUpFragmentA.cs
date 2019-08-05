@@ -13,7 +13,8 @@ using Android.Widget;
 
 namespace FinalProject_StudentHelper
 {
-       public class SignUpFragmentA : Fragment
+    [Obsolete]
+    public class SignUpFragmentA : Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -29,27 +30,13 @@ namespace FinalProject_StudentHelper
             Button nextFrag = myView.FindViewById<Button>(Resource.Id.register);
             nextFrag.Click += delegate
             {
-        //        Android.App.ActionBar.TabEventArgs tabEventArgs;
-       //         Fragment frag = new SignUpFragmentB();
-         //       _ = tabEventArgs.FragmentTransaction.Replace(Resource.Id.frameLayout1, frag);
-           //     View mV = inflater.Inflate(Resource.Layout.SignUpTabB, container, false);
-                
+                Intent signUpB = new Intent(Context, typeof(SignUpB));
+                 StartActivity(signUpB);
+
             };
            
             return myView;
-            //return base.OnCreateView(inflater, container, savedInstanceState);
-        }
+         }
 
     }
 }
-/*
-        void TabOnTabSelected(object sender, Android.App.ActionBar.TabEventArgs tabEventArgs)
-        {
-            Android.App.ActionBar.Tab tab = (Android.App.ActionBar.Tab)sender;
-
-            //Log.Debug(Tag, "The tab {0} has been selected.", tab.Text);
-            Fragment frag = _fragmentsArray[tab.Position];
-
-            tabEventArgs.FragmentTransaction.Replace(Resource.Id.frameLayout1, frag);
-        }
- * */
