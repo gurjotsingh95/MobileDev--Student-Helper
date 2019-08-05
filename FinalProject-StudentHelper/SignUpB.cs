@@ -19,10 +19,12 @@ namespace FinalProject_StudentHelper
         {
             base.OnCreate(savedInstanceState);
 
-            Button addButton = new Button(this)
-            {
-                Text = "Whatever he entered"
-            };
+            Button addButton = new Button(this);
+            addButton.Text = "LOLOLOL";
+            
+            addButton.SetWidth(100);
+            addButton.SetHeight(100);
+           
             LinearLayout buttonLayout = FindViewById<LinearLayout>(Resource.Id.buttonLayout);
             SetContentView(Resource.Layout.SignUpTabB);
             buttonLayout.AddView(addButton);
