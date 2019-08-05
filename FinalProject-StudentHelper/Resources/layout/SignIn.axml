@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" 
+    android:id="@+id/container1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint = "#7f2F4088"
+    android:backgroundTintMode = "src_over" >
+    <ScrollView
+        android:layout_width="382dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:textStyle="bold"
+                android:textSize="50dp"
+                android:fontFamily="cursive"
+                android:text = "Welcome"
+                android:textColor = "#ffffff"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:fontFamily="monospace"
+                android:textColor="#ffffff"
+                android:layout_marginTop="30dp"
+                android:text = "Let's get you logged In..."/>
+            <EditText
+                android:id="@+id/userNameID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="#1Affffff"
+                android:textColorHint="#A9A9A9"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:hint="Username"
+                android:textColor="#ffffff"
+
+	        />
+
+            <EditText
+                android:id="@+id/passwordID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="#1Affffff"
+                android:textColorHint="#A9A9A9"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="30dp"
+                android:padding="10dp"
+                android:hint="Password"
+             />
+
+            <Button
+                android:id="@+id/loginBtnID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="#f54e5f"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="30dp"
+                android:text="Login"
+                android:textStyle="bold"
+            />
+        </LinearLayout>
+    </ScrollView>  
+    <TextView
+        
+        android:id="@+id/myNameIdl"
+        android:layout_width="200dp" 
+        android:layout_height="50dp"
+          
+    />
+</LinearLayout>
