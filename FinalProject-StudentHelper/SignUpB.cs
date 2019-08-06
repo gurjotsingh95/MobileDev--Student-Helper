@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -19,16 +20,25 @@ namespace FinalProject_StudentHelper
         {
             base.OnCreate(savedInstanceState);
 
-            Button addButton = new Button(this);
-            addButton.Text = "LOLOLOL";
-            
-            addButton.SetWidth(100);
-            addButton.SetHeight(100);
-           
-            LinearLayout buttonLayout = FindViewById<LinearLayout>(Resource.Id.buttonLayout);
             SetContentView(Resource.Layout.SignUpTabB);
-            buttonLayout.AddView(addButton);
+
             // Create your application here
+        }
+        protected void addSubjectToView()
+        {
+            LinearLayout buttonLayout = FindViewById<LinearLayout>(Resource.Id.buttonLayout);
+
+            //     LinearLayout l1 = new LinearLayout(this);
+            Button addButton = new Button(this);
+            Button addButton2 = new Button(this);
+
+            addButton.Text = "subject1";
+            addButton2.Text = "subject2";
+
+            //    l1.AddView(addButton);
+            buttonLayout.AddView(addButton);
+            buttonLayout.AddView(addButton2);
+
         }
     }
 }

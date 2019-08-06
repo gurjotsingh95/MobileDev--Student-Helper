@@ -3247,6 +3247,12 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a0039
 			public const int ALT = 2131361849;
 			
+			// aapt resource value: 0x7f0a00ce
+			public const int AddSubjectButton = 2131361998;
+			
+			// aapt resource value: 0x7f0a00cc
+			public const int AddSubjectsLayout = 2131361996;
+			
 			// aapt resource value: 0x7f0a003a
 			public const int CTRL = 2131361850;
 			
@@ -3264,6 +3270,9 @@ namespace FinalProject_StudentHelper
 			
 			// aapt resource value: 0x7f0a003e
 			public const int SYM = 2131361854;
+			
+			// aapt resource value: 0x7f0a00cd
+			public const int SubjectsText = 2131361997;
 			
 			// aapt resource value: 0x7f0a008d
 			public const int action_bar = 2131361933;
@@ -3547,8 +3556,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a00c0
 			public const int loginBtnID = 2131361984;
 			
-			// aapt resource value: 0x7f0a00cf
-			public const int masked = 2131361999;
+			// aapt resource value: 0x7f0a00d1
+			public const int masked = 2131362001;
 			
 			// aapt resource value: 0x7f0a009c
 			public const int message = 2131361948;
@@ -3748,11 +3757,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a005b
 			public const int stretch = 2131361883;
 			
-			// aapt resource value: 0x7f0a00cd
-			public const int studentLayout = 2131361997;
-			
-			// aapt resource value: 0x7f0a00cc
-			public const int subjects = 2131361996;
+			// aapt resource value: 0x7f0a00cf
+			public const int studentLayout = 2131361999;
 			
 			// aapt resource value: 0x7f0a0084
 			public const int submenuarrow = 2131361924;
@@ -3859,8 +3865,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a001b
 			public const int view_offset_helper = 2131361819;
 			
-			// aapt resource value: 0x7f0a00ce
-			public const int visible = 2131361998;
+			// aapt resource value: 0x7f0a00d0
+			public const int visible = 2131362000;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int withText = 2131361859;
