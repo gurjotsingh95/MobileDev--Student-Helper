@@ -73,7 +73,6 @@
                 android:layout_marginBottom="30dp"
                 android:text="Login"
                 android:textStyle="bold"
-                android:drawableRight="@mipmap/ic_launcher_round"
             />
         </LinearLayout>
     </ScrollView>  

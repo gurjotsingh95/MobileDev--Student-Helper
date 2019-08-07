@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container2"
-    android:gravity="center_horizontal"
-    android:backgroundTint = "#7f2F4088"
-    android:backgroundTintMode = "src_over">
+    android:gravity="center_horizontal">
 
     <ScrollView
         android:layout_width="382dp"
@@ -18,81 +16,80 @@
             android:orientation="vertical"
             android:gravity="center_horizontal"
             android:layout_marginTop="30dp">
-    <TextView
-        
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:textStyle="bold"
-        android:textSize="28dp"
-        android:fontFamily="monospace"
-        android:textColor="#fff"
-        android:text = "Register with us..."/>
-    <EditText
-        android:id="@+id/userName2"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:background="#1Affffff"
-        android:textColorHint="#A9A9A9"
-        android:padding="10dp"
-        android:textColor="#ffffff"
-        android:hint=" Username"
-        android:layout_marginTop="30dp"
-               	/>
-    <EditText
-        android:id="@+id/pwdID"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:background="#1Affffff"
-        android:textColorHint="#A9A9A9"
-        android:layout_marginBottom="15dp"
-        android:padding="10dp"
-        android:hint=" Password"
-        android:layout_marginTop="15dp"
-        android:textColor="#ffffff"
-        />
-
-    <EditText
-        android:id="@+id/emailID"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:background="#1Affffff"
-        android:textColorHint="#A9A9A9"
-        android:layout_marginBottom="15dp"
-        android:padding="10dp"
-        android:hint=" Email"
-        android:textColor="#ffffff"
-        
-
-	/>
-    <EditText
-        android:id="@+id/genderID"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:background="#1Affffff"
-        android:textColorHint="#A9A9A9"
-        android:layout_marginBottom="15dp"
-        android:padding="10dp"
-        android:hint=" Gender"
-        android:textColor="#ffffff"
-
-	/>
-
-
-    <Button
-        android:id="@+id/register"
-        android:layout_width="300dp"
-        android:layout_height="55dp"
-        android:background="#f54e5f"
-        android:layout_marginTop="30dp"
-        android:text="Register"
-        android:textStyle="bold"
-        android:textColor="#ffffff"
-        
-    />
-            
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textSize="28dp"
+                android:fontFamily="monospace"
+                android:textColor="#fff"
+                android:text = "Register with us..."/>
+            <EditText
+                android:id="@+id/userName2"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/myedittext"
+                android:textColorHint="#A9A9A9"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:hint=" Username"
+                android:layout_marginTop="30dp"
+                android:inputType="textCapCharacters" />
+            <EditText
+                android:id="@+id/pwdID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/myedittext"
+                android:textColorHint="#A9A9A9"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:hint=" Password"
+                android:layout_marginTop="15dp"
+                android:textColor="#ffffff"
+                android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/emailID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/myedittext"
+                android:textColorHint="#A9A9A9"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:hint=" Email"
+                android:textColor="#ffffff"
+                android:inputType="textEmailAddress" />
+            <EditText
+                android:id="@+id/ageID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/myedittext"
+                android:textColorHint="#A9A9A9"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:hint=" Age"
+                android:textColor="#ffffff"
+                android:inputType="number" />
+            <EditText
+                android:id="@+id/genderID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/myedittext"
+                android:textColorHint="#A9A9A9"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:hint=" Gender"
+                android:textColor="#ffffff"	/>
+            <Button
+                android:id="@+id/register"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:background="@drawable/mybutton"
+                android:layout_marginTop="30dp"
+                android:text="Next"
+                android:textStyle="bold"
+                android:textColor="#ffffff"    />            
         </LinearLayout>
     </ScrollView>  
-
 </LinearLayout>
