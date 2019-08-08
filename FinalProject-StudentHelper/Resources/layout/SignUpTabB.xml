@@ -11,11 +11,10 @@
     <LinearLayout
         android:id="@+id/teacherLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
-        android:scrollbars="vertical" >
-
+        android:gravity="center_horizontal"
+        android:scrollbars="vertical">
         <TextView
             android:id="@+id/OneMoreStep"
             android:layout_width="wrap_content"
@@ -36,9 +35,9 @@
             <ImageView
                 android:layout_marginTop = "0dp"
                 android:layout_marginLeft = "10dp"
-                android:src="@android:drawable/ic_delete"            
+                android:src="@android:drawable/ic_delete"
                 android:layout_height="40dp"
-                android:layout_width = "20dp" 
+                android:layout_width = "20dp"
                 android:background = "#0dffffff"    />
 
             <Button
@@ -51,9 +50,9 @@
             <ImageView
                 android:layout_marginTop = "0dp"
                 android:layout_marginLeft = "10dp"
-                android:src="@android:drawable/ic_delete"            
+                android:src="@android:drawable/ic_delete"
                 android:layout_height="40dp"
-                android:layout_width = "20dp" 
+                android:layout_width = "20dp"
                 android:background = "#0dffffff"    />
             <Button
                 android:layout_width="wrap_content"
@@ -63,13 +62,12 @@
                 android:textColor = "@android:color/holo_red_dark"
                 android:textStyle="bold" />
         </LinearLayout>
-        
         <LinearLayout
             android:id="@+id/AddSubjectsLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"    
-            android:layout_marginTop = "-20dp"    >
+            android:orientation="horizontal"
+            android:layout_marginTop = "-20dp">
 
             <EditText
                 android:id="@+id/SubjectsText"
@@ -84,12 +82,61 @@
             <Button
                 android:id = "@+id/AddSubjectButton"
                 android:layout_marginTop="27dp"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:background = "@android:drawable/ic_input_add"    />
         </LinearLayout>
-    </LinearLayout>
+        <EditText
+            android:layout_marginLeft="-25dp"
+            android:id="ExperienceID"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:background="#1Affffff"
+            android:textColorHint="#A9A9A9"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:hint=" Previous Experience(in months)"
+            android:layout_marginTop="30dp" />
+        <EditText
+            android:layout_marginLeft="-25dp"
+            android:id="BioID"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:background="#1Affffff"
+            android:textColorHint="#A9A9A9"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:hint=" Add Something About Yourself!!"
+            android:layout_marginTop="30dp" />
+        <TextView
+            android:layout_marginLeft="-48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:text="Are you available for Home Tutoring?"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"    >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-35dp"
+                android:text="Yes"   />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-35dp"
+                android:text="No"   />
+        </LinearLayout>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-35dp"
+            android:text="Send your profile to admin for verification"   />
     
+    </LinearLayout>
     <LinearLayout
         android:id="@+id/studentLayout"
         android:layout_width="match_parent"
@@ -97,5 +144,4 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
     </LinearLayout>
-
 </RelativeLayout>

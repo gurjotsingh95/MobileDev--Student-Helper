@@ -106,7 +106,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\i3.jpg" />
+    <AndroidResource Include="Resources\drawable\i1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\SignIn.axml" />
@@ -123,7 +123,7 @@
     <AndroidResource Include="Resources\drawable\i2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\i1.jpg" />
+    <AndroidResource Include="Resources\drawable\halfi1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\myEditText.xml">
