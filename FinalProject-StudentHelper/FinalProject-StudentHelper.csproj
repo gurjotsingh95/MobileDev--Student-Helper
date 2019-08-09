@@ -115,9 +115,9 @@
     <AndroidResource Include="Resources\layout\SignUpTabA.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\SignUpTabB.xml">
+    <Content Include="Resources\layout\SignUpTabB.axml">
       <SubType>Designer</SubType>
-    </AndroidResource>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\i2.jpg" />
@@ -132,6 +132,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\myButton.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mySubButton.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\crossIconDrawable.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -21,24 +21,34 @@ namespace FinalProject_StudentHelper
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.SignUpTabB);
+            Button registerTeacherButton = FindViewById<Button>(Resource.Id.registerTeacher);
+            Button registerStudentButton = FindViewById<Button>(Resource.Id.registerStudent);
 
-            // Create your application here
-        }
-        protected void addSubjectToView()
-        {
-            LinearLayout buttonLayout = FindViewById<LinearLayout>(Resource.Id.buttonLayout);
+            registerTeacherButton.Click += delegate {
+                EditText prevExperience = FindViewById<EditText>(Resource.Id.ExperienceID);
+            };
 
-            //     LinearLayout l1 = new LinearLayout(this);
-            Button addButton = new Button(this);
-            Button addButton2 = new Button(this);
 
-            addButton.Text = "subject1";
-            addButton2.Text = "subject2";
+            registerStudentButton.Click += delegate { };
 
-            //    l1.AddView(addButton);
-            buttonLayout.AddView(addButton);
-            buttonLayout.AddView(addButton2);
+
 
         }
+        /*      protected void addSubjectToView()
+              {
+                  LinearLayout buttonLayout = FindViewById<LinearLayout>(Resource.Id.buttonLayout);
+
+                  //     LinearLayout l1 = new LinearLayout(this);
+                  Button addButton = new Button(this);
+                  Button addButton2 = new Button(this);
+
+                  addButton.Text = "subject1";
+                  addButton2.Text = "subject2";
+
+                  //    l1.AddView(addButton);
+                  buttonLayout.AddView(addButton);
+                  buttonLayout.AddView(addButton2);
+
+              } */
     }
 }

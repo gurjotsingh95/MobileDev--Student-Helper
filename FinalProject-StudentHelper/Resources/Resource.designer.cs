@@ -3123,119 +3123,125 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f020075
-			public const int avd_hide_password_1 = 2130837621;
-			
-			// aapt resource value: 0x7f020076
-			public const int avd_hide_password_2 = 2130837622;
-			
 			// aapt resource value: 0x7f020077
-			public const int avd_hide_password_3 = 2130837623;
+			public const int avd_hide_password_1 = 2130837623;
+			
+			// aapt resource value: 0x7f020078
+			public const int avd_hide_password_2 = 2130837624;
+			
+			// aapt resource value: 0x7f020079
+			public const int avd_hide_password_3 = 2130837625;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f020078
-			public const int avd_show_password_1 = 2130837624;
-			
-			// aapt resource value: 0x7f020079
-			public const int avd_show_password_2 = 2130837625;
-			
 			// aapt resource value: 0x7f02007a
-			public const int avd_show_password_3 = 2130837626;
+			public const int avd_show_password_1 = 2130837626;
+			
+			// aapt resource value: 0x7f02007b
+			public const int avd_show_password_2 = 2130837627;
+			
+			// aapt resource value: 0x7f02007c
+			public const int avd_show_password_3 = 2130837628;
 			
 			// aapt resource value: 0x7f020056
-			public const int design_bottom_navigation_item_background = 2130837590;
+			public const int crossIconDrawable = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int design_fab_background = 2130837591;
+			public const int design_bottom_navigation_item_background = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int design_ic_visibility = 2130837592;
+			public const int design_fab_background = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int design_ic_visibility_off = 2130837593;
+			public const int design_ic_visibility = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int design_password_eye = 2130837594;
+			public const int design_ic_visibility_off = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int design_snackbar_background = 2130837595;
+			public const int design_password_eye = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int halfi1 = 2130837596;
+			public const int design_snackbar_background = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int i1 = 2130837597;
+			public const int halfi1 = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int i2 = 2130837598;
+			public const int i1 = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_mtrl_chip_checked_black = 2130837599;
+			public const int i2 = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_mtrl_chip_checked_circle = 2130837600;
+			public const int ic_mtrl_chip_checked_black = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int ic_mtrl_chip_close_circle = 2130837601;
+			public const int ic_mtrl_chip_checked_circle = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int mtrl_snackbar_background = 2130837602;
+			public const int ic_mtrl_chip_close_circle = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int mtrl_tabs_default_indicator = 2130837603;
+			public const int mtrl_snackbar_background = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int myButton = 2130837604;
+			public const int mtrl_tabs_default_indicator = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int myEditText = 2130837605;
+			public const int myButton = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int navigation_empty_icon = 2130837606;
+			public const int myEditText = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int notification_action_background = 2130837607;
+			public const int mySubButton = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int notification_bg = 2130837608;
+			public const int navigation_empty_icon = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int notification_bg_low = 2130837609;
+			public const int notification_action_background = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int notification_bg_low_normal = 2130837610;
+			public const int notification_bg = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int notification_bg_low_pressed = 2130837611;
+			public const int notification_bg_low = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int notification_bg_normal = 2130837612;
+			public const int notification_bg_low_normal = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int notification_bg_normal_pressed = 2130837613;
+			public const int notification_bg_low_pressed = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int notification_icon_background = 2130837614;
-			
-			// aapt resource value: 0x7f020073
-			public const int notification_template_icon_bg = 2130837619;
-			
-			// aapt resource value: 0x7f020074
-			public const int notification_template_icon_low_bg = 2130837620;
+			public const int notification_bg_normal = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int notification_tile_bg = 2130837615;
+			public const int notification_bg_normal_pressed = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int notify_panel_notification_icon_bg = 2130837616;
+			public const int notification_icon_background = 2130837616;
+			
+			// aapt resource value: 0x7f020075
+			public const int notification_template_icon_bg = 2130837621;
+			
+			// aapt resource value: 0x7f020076
+			public const int notification_template_icon_low_bg = 2130837622;
 			
 			// aapt resource value: 0x7f020071
-			public const int tooltip_frame_dark = 2130837617;
+			public const int notification_tile_bg = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int tooltip_frame_light = 2130837618;
+			public const int notify_panel_notification_icon_bg = 2130837618;
+			
+			// aapt resource value: 0x7f020073
+			public const int tooltip_frame_dark = 2130837619;
+			
+			// aapt resource value: 0x7f020074
+			public const int tooltip_frame_light = 2130837620;
 			
 			static Drawable()
 			{
@@ -3253,41 +3259,20 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a0039
 			public const int ALT = 2131361849;
 			
-			// aapt resource value: 0x7f0a00d0
-			public const int AddSubjectButton = 2131362000;
-			
-			// aapt resource value: 0x7f0a00ce
-			public const int AddSubjectsLayout = 2131361998;
-			
-			// aapt resource value: 0x7f0a00d2
-			public const int BioID = 2131362002;
-			
 			// aapt resource value: 0x7f0a003a
 			public const int CTRL = 2131361850;
-			
-			// aapt resource value: 0x7f0a00d1
-			public const int ExperienceID = 2131362001;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int FUNCTION = 2131361851;
 			
-			// aapt resource value: 0x7f0a00db
-			public const int FieldID = 2131362011;
-			
 			// aapt resource value: 0x7f0a003c
 			public const int META = 2131361852;
-			
-			// aapt resource value: 0x7f0a00cb
-			public const int OneMoreStep = 2131361995;
 			
 			// aapt resource value: 0x7f0a003d
 			public const int SHIFT = 2131361853;
 			
 			// aapt resource value: 0x7f0a003e
 			public const int SYM = 2131361854;
-			
-			// aapt resource value: 0x7f0a00cf
-			public const int SubjectsText = 2131361999;
 			
 			// aapt resource value: 0x7f0a008d
 			public const int action_bar = 2131361933;
@@ -3390,9 +3375,6 @@ namespace FinalProject_StudentHelper
 			
 			// aapt resource value: 0x7f0a009f
 			public const int browser_actions_menu_view = 2131361951;
-			
-			// aapt resource value: 0x7f0a00cd
-			public const int buttonLayout = 2131361997;
 			
 			// aapt resource value: 0x7f0a0072
 			public const int buttonPanel = 2131361906;
@@ -3577,8 +3559,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a00c0
 			public const int loginBtnID = 2131361984;
 			
-			// aapt resource value: 0x7f0a00de
-			public const int masked = 2131362014;
+			// aapt resource value: 0x7f0a00cb
+			public const int masked = 2131361995;
 			
 			// aapt resource value: 0x7f0a009c
 			public const int message = 2131361948;
@@ -3600,9 +3582,6 @@ namespace FinalProject_StudentHelper
 			
 			// aapt resource value: 0x7f0a00c1
 			public const int myNameIdl = 2131361985;
-			
-			// aapt resource value: 0x7f0a00d7
-			public const int nameSchoolCollege = 2131362007;
 			
 			// aapt resource value: 0x7f0a00a9
 			public const int navigation_header_container = 2131361961;
@@ -3655,32 +3634,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a0087
 			public const int radio = 2131361927;
 			
-			// aapt resource value: 0x7f0a00da
-			public const int radioCollege = 2131362010;
-			
-			// aapt resource value: 0x7f0a00d9
-			public const int radioSchool = 2131362009;
-			
-			// aapt resource value: 0x7f0a00d8
-			public const int radioSchoolCollege = 2131362008;
-			
-			// aapt resource value: 0x7f0a00d4
-			public const int radio_blue = 2131362004;
-			
-			// aapt resource value: 0x7f0a00d3
-			public const int radio_red = 2131362003;
-			
 			// aapt resource value: 0x7f0a00c9
 			public const int register = 2131361993;
-			
-			// aapt resource value: 0x7f0a00dc
-			public const int registerStudent = 2131362012;
-			
-			// aapt resource value: 0x7f0a00d5
-			public const int registerTeacher = 2131362005;
-			
-			// aapt resource value: 0x7f0a00ca
-			public const int relativeContainer = 2131361994;
 			
 			// aapt resource value: 0x7f0a0055
 			public const int right = 2131361877;
@@ -3802,9 +3757,6 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a005b
 			public const int stretch = 2131361883;
 			
-			// aapt resource value: 0x7f0a00d6
-			public const int studentLayout = 2131362006;
-			
 			// aapt resource value: 0x7f0a0084
 			public const int submenuarrow = 2131361924;
 			
@@ -3822,9 +3774,6 @@ namespace FinalProject_StudentHelper
 			
 			// aapt resource value: 0x7f0a0020
 			public const int tag_unhandled_key_listeners = 2131361824;
-			
-			// aapt resource value: 0x7f0a00cc
-			public const int teacherLayout = 2131361996;
 			
 			// aapt resource value: 0x7f0a0021
 			public const int text = 2131361825;
@@ -3910,8 +3859,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a001b
 			public const int view_offset_helper = 2131361819;
 			
-			// aapt resource value: 0x7f0a00dd
-			public const int visible = 2131362013;
+			// aapt resource value: 0x7f0a00ca
+			public const int visible = 2131361994;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int withText = 2131361859;
@@ -4190,10 +4139,7 @@ namespace FinalProject_StudentHelper
 			public const int SignUpTabA = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int SignUpTabB = 2130968634;
-			
-			// aapt resource value: 0x7f04003b
-			public const int support_simple_spinner_dropdown_item = 2130968635;
+			public const int support_simple_spinner_dropdown_item = 2130968634;
 			
 			static Layout()
 			{
