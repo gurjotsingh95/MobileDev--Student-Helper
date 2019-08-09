@@ -35,13 +35,24 @@ namespace FinalProject_StudentHelper
             EditText gender = myView.FindViewById<EditText>(Resource.Id.genderID);
             EditText contact = myView.FindViewById<EditText>(Resource.Id.contactID);
 
-
+            var userNameText = userName.Text;
+            var passWordText = passWord.Text;
+            var eMailText = eMail.Text;
+            var ageText = age.Text;
+            var genderText = gender.Text;
+            var contactText = contact.Text;
 
             nextFrag.Click += delegate
             {
-
+                
                 Intent signUpB = new Intent(Context, typeof(SignUpB));
-                 StartActivity(signUpB);
+                signUpB.PutExtra("userName", userNameText);
+                signUpB.PutExtra("passWord", passWordText);
+                signUpB.PutExtra("eMail", eMailText);
+                signUpB.PutExtra("age", ageText);
+                signUpB.PutExtra("gender", genderText);
+                signUpB.PutExtra("contact", contactText);
+                StartActivity(signUpB);
 
             };
            
