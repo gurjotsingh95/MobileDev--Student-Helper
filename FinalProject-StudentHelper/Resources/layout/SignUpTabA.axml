@@ -15,12 +15,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="10dp">
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="10dp"
                 android:textStyle="bold"
                 android:textSize="28dp"
                 android:fontFamily="monospace"
@@ -81,6 +81,17 @@
                 android:padding="10dp"
                 android:hint=" Gender"
                 android:textColor="#ffffff"	/>
+            <EditText
+                android:id="@+id/contactID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/myedittext"
+                android:textColorHint="#A9A9A9"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:hint=" Contact"
+                android:textColor="#ffffff"
+                android:inputType="none|phone" />
             <Button
                 android:id="@+id/register"
                 android:layout_width="300dp"
@@ -89,7 +100,7 @@
                 android:layout_marginTop="30dp"
                 android:text="Next"
                 android:textStyle="bold"
-                android:textColor="#ffffff"    />            
+                android:textColor="#ffffff"    />
         </LinearLayout>
     </ScrollView>  
 </LinearLayout>

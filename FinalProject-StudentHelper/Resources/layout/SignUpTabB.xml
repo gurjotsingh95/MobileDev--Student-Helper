@@ -8,25 +8,29 @@
     android:background="@drawable/i1"
     android:backgroundTint = "#7f2F4088"
     android:backgroundTintMode = "src_over" >
+    <TextView
+        android:id="@+id/OneMoreStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textStyle="bold"
+        android:textSize="28dp"
+        android:fontFamily="monospace"
+        android:textColor="#fff"
+        android:text = "One more Step..."/>
     <LinearLayout
         android:id="@+id/teacherLayout"
+        android:layout_below="@id/OneMoreStep"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:scrollbars="vertical">
-        <TextView
-            android:id="@+id/OneMoreStep"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:textStyle="bold"
-            android:textSize="28dp"
-            android:fontFamily="monospace"
-            android:textColor="#fff"
-            android:text = "One more Step..."/>
+        android:scrollbars="vertical"
+        android:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/buttonLayout"
+            android:layout_marginTop="-10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding = "10dp"
@@ -67,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop = "-20dp">
+            android:layout_marginTop = "-30dp">
 
             <EditText
                 android:id="@+id/SubjectsText"
@@ -78,17 +82,17 @@
                 android:padding="10dp"
                 android:textColor="#ffffff"
                 android:hint=" Subject (Upto 2)"
-                android:layout_marginTop="30dp" />
+                android:layout_marginTop="25dp" />
             <Button
                 android:id = "@+id/AddSubjectButton"
-                android:layout_marginTop="27dp"
+                android:layout_marginTop="22dp"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:background = "@android:drawable/ic_input_add"    />
         </LinearLayout>
         <EditText
             android:layout_marginLeft="-25dp"
-            android:id="ExperienceID"
+            android:id="@+id/ExperienceID"
             android:layout_width="300dp"
             android:layout_height="45dp"
             android:background="#1Affffff"
@@ -96,10 +100,10 @@
             android:padding="10dp"
             android:textColor="#ffffff"
             android:hint=" Previous Experience(in months)"
-            android:layout_marginTop="30dp" />
+            android:layout_marginTop="13dp" />
         <EditText
             android:layout_marginLeft="-25dp"
-            android:id="BioID"
+            android:id="@+id/BioID"
             android:layout_width="300dp"
             android:layout_height="100dp"
             android:background="#1Affffff"
@@ -107,41 +111,133 @@
             android:padding="10dp"
             android:textColor="#ffffff"
             android:hint=" Add Something About Yourself!!"
-            android:layout_marginTop="30dp" />
-        <TextView
-            android:layout_marginLeft="-48dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:textSize="16dp"
-            android:text="Are you available for Home Tutoring?"/>
+            android:layout_marginTop="13dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"    >
+            android:orientation="horizontal"
+            android:layout_marginLeft="-27dp">
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="-35dp"
-                android:text="Yes"   />
+                android:text="Group Sessions"/>
             <CheckBox
+                android:layout_marginLeft="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="-35dp"
-                android:text="No"   />
+                android:text="Individual Session"/> 
         </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="-48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:text="Are you available for Home Tutoring?"/>
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radio_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"/>
+            <RadioButton
+                android:id="@+id/radio_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="No" />
+        </RadioGroup>
+
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="-35dp"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginTop="10dp"
             android:text="Send your profile to admin for verification"   />
-    
+        <Button
+            android:id="@+id/registerTeacher"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:background="@drawable/mybutton"
+            android:layout_marginTop="5dp"
+            android:text="Register"
+            android:textStyle="bold"
+            android:textColor="#ffffff"    />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/studentLayout"
+        android:layout_below="@id/OneMoreStep"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/nameSchoolCollege"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:background="#1Affffff"
+            android:textColorHint="#A9A9A9"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:hint="School/College Name"
+            android:layout_marginTop="-60dp"
+            android:inputType="textMultiLine" />
+        <RadioGroup
+            android:id="@+id/radioSchoolCollege"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radioSchool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In School"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="50dp"/>
+            <RadioButton
+                android:id="@+id/radioCollege"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="In College" />
+        </RadioGroup>
+        <EditText
+            android:id="@+id/ExperienceID"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:background="#1Affffff"
+            android:textColorHint="#A9A9A9"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:hint=" Class/Year"
+            android:layout_marginTop="20dp" />
+        <EditText
+            android:id="@+id/FieldID"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:background="#1Affffff"
+            android:textColorHint="#A9A9A9"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:hint=" Study Field"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/registerStudent"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:background="@drawable/mybutton"
+            android:layout_marginTop="40dp"
+            android:text="Register"
+            android:textStyle="bold"
+            android:textColor="#ffffff"    />
     </LinearLayout>
 </RelativeLayout>
