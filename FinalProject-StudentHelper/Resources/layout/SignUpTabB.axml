@@ -11,7 +11,6 @@
     
     <LinearLayout
         android:id="@+id/teacherLayout"
-        
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -38,6 +37,7 @@
             android:orientation="horizontal"
             android:layout_marginLeft = "-25dp">
             <Button
+                android:id="@+id/subject1"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:text = "Subject 21"
@@ -47,6 +47,7 @@
                 android:layout_marginRight="5dp"
                 android:drawableLeft="@drawable/crossicondrawable"    />
             <Button
+                android:id="@+id/subject2"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:layout_marginLeft="5dp"
@@ -191,7 +192,7 @@
         android:textColor="#fff"
         android:text = "One more Step..."/>
         <EditText
-            android:id="@+id/nameSchoolCollege"
+            android:id="@+id/nameSchoolCollegeID"
             
             android:layout_width="300dp"
             android:layout_height="100dp"
@@ -203,27 +204,27 @@
             android:layout_marginTop="0dp"
             android:inputType="textMultiLine" />
         <RadioGroup
-            android:id="@+id/radioSchoolCollege"
+            android:id="@+id/radioSchoolCollegeID"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:orientation="horizontal">
             <RadioButton
-                android:id="@+id/radioSchool"
+                android:id="@+id/radioSchoolId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="In School"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="50dp"/>
             <RadioButton
-                android:id="@+id/radioCollege"
+                android:id="@+id/radioCollegeId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:text="In College" />
         </RadioGroup>
         <EditText
-            android:id="@+id/ExperienceID"
+            android:id="@+id/ClassOrYearId"
             android:layout_width="300dp"
             android:layout_height="45dp"
             android:background="#1Affffff"
@@ -233,7 +234,7 @@
             android:hint=" Class/Year"
             android:layout_marginTop="20dp" />
         <EditText
-            android:id="@+id/FieldID"
+            android:id="@+id/FieldId"
             android:layout_width="300dp"
             android:layout_height="45dp"
             android:background="#1Affffff"
