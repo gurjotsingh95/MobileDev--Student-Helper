@@ -21,35 +21,85 @@ namespace FinalProject_StudentHelper
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.SignUpTabB);
+            Button addSubButton = FindViewById<Button>(Resource.Id.AddSubjectButton);
             Button registerTeacherButton = FindViewById<Button>(Resource.Id.registerTeacher);
             Button registerStudentButton = FindViewById<Button>(Resource.Id.registerStudent);
-
+            Button subject1 = FindViewById<Button>(Resource.Id.subject1);
+            Button subject2 = FindViewById<Button>(Resource.Id.subject2);
+            subject1.Enabled = false;
+            subject1.Visibility = ViewStates.Invisible;
+            subject2.Enabled = false;
+            subject2.Visibility = ViewStates.Invisible;
             var userName = Intent.GetStringExtra("userNameText");
             var passWord = Intent.GetStringExtra("passWordText");
             var eMail = Intent.GetStringExtra("eMailText");
             var age = Intent.GetStringExtra("ageText");
             var gender = Intent.GetStringExtra("genderText");
             long contact = Intent.GetLongExtra("contactText", 9999999999);
+            string subject1Value = null;
+            string subject2Value = null;
+            Boolean homeTutorValue = false;
+            Boolean individualSess = false;
+            Boolean groupSess = false;
+            DBHelper sqlFunctions = new DBHelper(this);
+            addSubButton.Click += delegate {
+                EditText subjectName = FindViewById<EditText>(Resource.Id.SubjectsText);
+                var subjectValue = subjectName.Text;
+                if(subject1.Enabled == false && subject2.Enabled == false)
+                {
+                    subject1.Text = subjectValue;
+                    subject1Value = subjectValue;
+                    subject1.Enabled = true;
+                    subjectName.Text = "";
+                    subject1.Visibility = ViewStates.Visible;
 
+                }
+                else if(subject1.Enabled == true && subject2.Enabled == false)
+                {
+                    subject2.Text = subjectValue;
+                    subject2Value = subjectValue;
+                    subject2.Enabled = true;
+                    subjectName.Text = "";
+                    subject2.Visibility = ViewStates.Visible;
+
+                }
+                else
+                {
+                    Toast.MakeText(this, "Cannot add more than 2 subjects!!!", ToastLength.Short).Show();
+                }
+            };
 
             registerTeacherButton.Click += delegate {
 
-                Button subject1 = FindViewById<Button>(Resource.Id.subject1);
-                Button subject2 = FindViewById<Button>(Resource.Id.subject2);
-
                 EditText prevExperience = FindViewById<EditText>(Resource.Id.ExperienceID);
                 EditText bio = FindViewById<EditText>(Resource.Id.BioID);
-
-                RadioGroup homeTutor = FindViewById<RadioGroup>(Resource.Id.radioHomeTutorId);
-                RadioButton selectedSchoolOrCollege = FindViewById<RadioButton>(homeTutor.CheckedRadioButtonId);
+                int exp = Convert.ToInt32(prevExperience.Text);
+                var biography = bio.Text;
 
                 CheckBox individualSessionCheck = FindViewById<CheckBox>(Resource.Id.checkInvidualID);
                 CheckBox groupSessionCheck = FindViewById<CheckBox>(Resource.Id.checkGroupId);
-                CheckBox verificationCheck = FindViewById<CheckBox>(Resource.Id.verificationId);
+                if(individualSessionCheck.Checked)
+                {
+                    individualSess = true;
+                }
+                if(groupSessionCheck.Checked)
+                {
+                    groupSess = true;
+                }
+                RadioGroup homeTutor = FindViewById<RadioGroup>(Resource.Id.radioHomeTutorId);
+                RadioButton homeTutorSelect = FindViewById<RadioButton>(homeTutor.CheckedRadioButtonId);
+                if(homeTutorSelect.Text == "Yes")
+                {
+                    homeTutorValue = true;
+                }
 
+                CheckBox verificationCheck = FindViewById<CheckBox>(Resource.Id.verificationId);
+                
                 if(verificationCheck.Checked)
                 {
                     //call insert to teacher db and insert to admin db
+                    sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1Value, subject2Value, exp, biography, individualSess, groupSess, homeTutorValue, true);
+
                 }
                 else
                 {

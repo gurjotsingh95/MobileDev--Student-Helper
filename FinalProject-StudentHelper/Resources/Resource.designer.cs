@@ -3166,7 +3166,7 @@ namespace FinalProject_StudentHelper
 			public const int design_snackbar_background = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int halfi1 = 2130837597;
+			public const int fulli1 = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
 			public const int i1 = 2130837598;

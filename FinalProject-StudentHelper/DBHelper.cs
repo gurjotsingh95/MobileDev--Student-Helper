@@ -7,10 +7,8 @@ using System.Collections.Generic;
 namespace FinalProject_StudentHelper
 
 {
-    public class DBHelper : SQLiteOpenHelper  // Step: 1 - 2 // Class that you need extend 
+    public class DBHelper : SQLiteOpenHelper
     {
-
-        //Step: 1 - 3:
         private static string _DatabaseName = "mydatabase.db";
 
         private const string StudentTable = "student";
@@ -46,43 +44,70 @@ namespace FinalProject_StudentHelper
 
 
         //GeneralQuery             
-        public const string CreateUserTableQuery = "CREATE TABLE " + StudentTable + " ("
-            + ColumnName + " TEXT," + ColumnPwd + " Text," + ColumnEmail + " TEXT," 
-            + ColumnAge + " Text," + ColumnGender + " Text," + ColumnContact + " Text,"
-            + ColumnCollege + " Text," + ColumnYear + " Text," + ColumnField + " Text,)";  //Step: 1 - 4
+        public const string CreateStudentTableQuery = "CREATE TABLE " + StudentTable + " ("
+            + ColumnName + " TEXT," + ColumnPwd + " Text," + ColumnEmail + " VARCHAR2(20)," 
+            + ColumnAge + " Text," + ColumnGender + " Text," + ColumnContact + " Number(11),"
+            + ColumnCollege + " Text," + ColumnYear + " Number(5)," + ColumnField + " Text,)";
 
      //Teacher Query
         public const string CreateTeacherTableQuery = "CREATE TABLE " + TeacherTable + " ("
-             + ColumnName + " TEXT," + ColumnPwd + " Text," + ColumnEmail + " TEXT,"
-             + ColumnAge + " Text," + ColumnGender + " Text," + ColumnContact + " Text,"
-            + ColumnSubject1 + " Text," + ColumnSubject2 + " Text," + ColumnExperience + " Text," 
-            + ColumnBio + " Text," + ColumnIndividualSession+ " Text," + ColumnGroupSession + " Text,"
-            + ColumnTutoring + " Text," + ColumnVerification + " Text,)";
-
+             + ColumnName + " TEXT," + ColumnPwd + " Text," + ColumnEmail + " VARCHAR2(20),"
+             + ColumnAge + " Text," + ColumnGender + " Text," + ColumnContact + " Number(11),"
+            + ColumnSubject1 + " Text," + ColumnSubject2 + " Text," + ColumnExperience + " int," 
+            + ColumnBio + " Text," + ColumnIndividualSession+ " Boolean," + ColumnGroupSession + " Boolean,"
+            + ColumnTutoring + " Boolean," + ColumnVerification + " Boolean,)";
         //Admin Query
         public const string CreateAdminTableQuery = "CREATE TABLE " + VerificationTable + " ("
               + ColumnTeacherId + " TEXT, )";
 
-        SQLiteDatabase myDBObj; // Step: 1 - 5
-        Context myContext; // Step: 1 - 6
+        SQLiteDatabase myDBObj;
+        Context myContext;
 
         public DBHelper(Context context) : base(context, name: _DatabaseName, factory: null, version: 1) //Step 2;
         {
             myContext = context;
             myDBObj = WritableDatabase; // Step:3 create a DB objects
         }
-
-
         public override void OnCreate(SQLiteDatabase db)  // Step: 1 - 2:1
         {
-
-            db.ExecSQL(CreateUserTableQuery);  // Step: 4
-
+            db.ExecSQL(CreateStudentTableQuery);
+            db.ExecSQL(CreateTeacherTableQuery);
+            db.ExecSQL(CreateAdminTableQuery);
+            Console.WriteLine(CreateTeacherTableQuery);
         }
-
         public override void OnUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) // Step: 1 - 2:2
         {
             throw new NotImplementedException();
         }
+        // Student Insert Function
+        public void insertValueStudent(string userNameValue, string pwdValue, string emailValue, string ageValue, string genderValue, long contactValue, string collegeValue, int yearValue, string fieldValue  )
+        {
+            String insertSQL = "insert into " + StudentTable + " values ('" + userNameValue + "'" + "," + "'" + pwdValue + "'" + "," 
+                + "'" + emailValue + "'" + "," + "'" + ageValue + "'" + "," + "'" + genderValue + "'" + "," 
+                + "'" + contactValue + "'" + "," + "'" + collegeValue + "'" + "," + "'" + yearValue + "'" + "," 
+                + "'" + fieldValue + "'" + ");";
+
+            Console.WriteLine("Insert SQL " + insertSQL);
+            myDBObj.ExecSQL(insertSQL);
+        }
+        public void insertValueTeacher(string userNameValue, string pwdValue, string emailValue, string ageValue, string genderValue, long contactValue, string subject1Value, string subject2Value, int experienceValue, string bioValue, Boolean individualSession, Boolean groupSession, Boolean homeTutor, Boolean Verification)
+        {
+            String insertSQL = "insert into " + TeacherTable + " values ('" + userNameValue + "'" + "," + "'" + pwdValue + "'" + ","
+                + "'" + emailValue + "'" + "," + "'" + ageValue + "'" + "," + "'" + genderValue + "'" + "," 
+                + "'" + contactValue + "'" + "," + "'" + subject1Value + "'" + "," + "'" + subject2Value + "'" + "," 
+                + "'" + experienceValue + "'" + "," + "'" + bioValue + "'" + "," + "'" + individualSession + "'" + "," 
+                + "'" + groupSession + "'" + "," + "'" + homeTutor + "'" + "," + "'" + Verification + "'" + ");";
+
+            Console.WriteLine("Insert SQL ===" + insertSQL);
+            myDBObj.ExecSQL(insertSQL);
+
+        }
+        public void insertValueAdmin(string teacherEmailValue)
+        {
+            String insertSQL = "insert into " + VerificationTable + " values ('" + teacherEmailValue + "'" + ");";
+            System.Console.WriteLine("Insert SQL " + insertSQL);
+            myDBObj.ExecSQL(insertSQL);
+        }
+
     }
 }
