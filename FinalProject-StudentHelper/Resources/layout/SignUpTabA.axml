@@ -35,8 +35,7 @@
                 android:padding="10dp"
                 android:textColor="#ffffff"
                 android:hint=" Username"
-                android:layout_marginTop="30dp"
-                android:inputType="textCapCharacters" />
+                android:layout_marginTop="30dp"/>
             <EditText
                 android:id="@+id/pwdID"
                 android:layout_width="300dp"
@@ -91,7 +90,27 @@
                 android:padding="10dp"
                 android:hint=" Contact"
                 android:textColor="#ffffff"
-                android:inputType="none|phone" />
+                android:inputType="phone" />
+            <RadioGroup
+                android:id="@+id/studentTeacherRadioId"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/studentRadioId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regiister as Teacher"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="50dp"/>
+                <RadioButton
+                    android:id="@+id/teacherRadioId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Register as Student" />
+            </RadioGroup>
             <Button
                 android:id="@+id/register"
                 android:layout_width="300dp"

@@ -19,8 +19,14 @@ namespace FinalProject_StudentHelper
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             SetContentView(Resource.Layout.SignUp);
+            LinearLayout teacher = FindViewById<LinearLayout>(Resource.Id.teacherLayout);
+            LinearLayout student = FindViewById<LinearLayout>(Resource.Id.studentLayout);
+            teacher.Enabled = false;
+            student.Enabled = false;
+            teacher.Visibility = ViewStates.Invisible;
+            student.Visibility = ViewStates.Invisible;
+
             Button addSubButton = FindViewById<Button>(Resource.Id.AddSubjectButton);
             Button registerTeacherButton = FindViewById<Button>(Resource.Id.registerTeacher);
             Button registerStudentButton = FindViewById<Button>(Resource.Id.registerStudent);
@@ -30,43 +36,62 @@ namespace FinalProject_StudentHelper
             subject1.Visibility = ViewStates.Invisible;
             subject2.Enabled = false;
             subject2.Visibility = ViewStates.Invisible;
-            var userName = Intent.GetStringExtra("userNameText");
-            var passWord = Intent.GetStringExtra("passWordText");
-            var eMail = Intent.GetStringExtra("eMailText");
-            var age = Intent.GetStringExtra("ageText");
-            var gender = Intent.GetStringExtra("genderText");
-            long contact = Intent.GetLongExtra("contactText", 9999999999);
+            var userName = Intent.GetStringExtra("userName");
+            var passWord = Intent.GetStringExtra("passWord");
+            var eMail = Intent.GetStringExtra("eMail");
+            var age = Intent.GetStringExtra("age");
+            var gender = Intent.GetStringExtra("gender");
+            var contact = Intent.GetStringExtra("contact");
+            var registerType = Intent.GetStringExtra("registerType");
+
             string subject1Value = null;
             string subject2Value = null;
             Boolean homeTutorValue = false;
             Boolean individualSess = false;
             Boolean groupSess = false;
+            //yes= tcher
+            if(registerType == "Yes")
+            {
+                teacher.Enabled = true;
+                teacher.Visibility = ViewStates.Visible;
+            }
+            else
+            {
+                student.Enabled = true;
+                student.Visibility = ViewStates.Visible;
+            }
             DBHelper sqlFunctions = new DBHelper(this);
             addSubButton.Click += delegate {
                 EditText subjectName = FindViewById<EditText>(Resource.Id.SubjectsText);
                 var subjectValue = subjectName.Text;
-                if(subject1.Enabled == false && subject2.Enabled == false)
+                if(subject1.Enabled == false)
                 {
                     subject1.Text = subjectValue;
-                    subject1Value = subjectValue;
+                   // subject1Value = subjectValue;
                     subject1.Enabled = true;
                     subjectName.Text = "";
                     subject1.Visibility = ViewStates.Visible;
-
                 }
                 else if(subject1.Enabled == true && subject2.Enabled == false)
                 {
                     subject2.Text = subjectValue;
-                    subject2Value = subjectValue;
+                  //  subject2Value = subjectValue;
                     subject2.Enabled = true;
                     subjectName.Text = "";
                     subject2.Visibility = ViewStates.Visible;
-
                 }
                 else
                 {
                     Toast.MakeText(this, "Cannot add more than 2 subjects!!!", ToastLength.Short).Show();
                 }
+            };
+            subject1.Click += delegate
+            {
+                deleteSubject(subject1);
+            };
+            subject2.Click += delegate
+            {
+                deleteSubject(subject2);
             };
 
             registerTeacherButton.Click += delegate {
@@ -92,18 +117,20 @@ namespace FinalProject_StudentHelper
                 {
                     homeTutorValue = true;
                 }
-
                 CheckBox verificationCheck = FindViewById<CheckBox>(Resource.Id.verificationId);
                 
                 if(verificationCheck.Checked)
                 {
+                    Console.WriteLine("USERNAME FROM SIGN UP A PAGE ON SIGN UP B ---"+userName);
                     //call insert to teacher db and insert to admin db
-                    sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1Value, subject2Value, exp, biography, individualSess, groupSess, homeTutorValue, true);
-
+                    sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1.Text, subject2.Text, exp, biography, individualSess, groupSess, homeTutorValue, true);
+                    sqlFunctions.insertValueAdmin(eMail);
                 }
                 else
                 {
                     //call insert to teach table
+                    sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1Value, subject2Value, exp, biography, individualSess, groupSess, homeTutorValue, true);
+
                 }
             };
 
@@ -116,10 +143,18 @@ namespace FinalProject_StudentHelper
                 RadioGroup inSchoolOrCollege = FindViewById<RadioGroup>(Resource.Id.radioSchoolCollegeID);
                 RadioButton selectedSchoolOrCollege = FindViewById<RadioButton>(inSchoolOrCollege.CheckedRadioButtonId);
 
+
+
             };
 
 
 
+        }
+        protected void deleteSubject(Button subjectClicked)
+        {
+            subjectClicked.Visibility = ViewStates.Invisible;
+            subjectClicked.Text = "";
+            subjectClicked.Enabled = false;
         }
         /*      protected void addSubjectToView()
               {
@@ -136,6 +171,16 @@ namespace FinalProject_StudentHelper
                   buttonLayout.AddView(addButton);
                   buttonLayout.AddView(addButton2);
 
-              } */
+                        if(subject1.Enabled == false)
+                {
+                    subject1.Text = subjectValue;
+                    subject1Value = subjectValue;
+                    subject1.Enabled = true;
+                    subjectName.Text = "";
+                    subject1.Visibility = ViewStates.Visible;
+
+                }
+        
+        } */
     }
 }

@@ -3592,8 +3592,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a00c0
 			public const int loginBtnID = 2131361984;
 			
-			// aapt resource value: 0x7f0a00e5
-			public const int masked = 2131362021;
+			// aapt resource value: 0x7f0a00e8
+			public const int masked = 2131362024;
 			
 			// aapt resource value: 0x7f0a009c
 			public const int message = 2131361948;
@@ -3688,8 +3688,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a00d0
 			public const int radioYes = 2131362000;
 			
-			// aapt resource value: 0x7f0a00e3
-			public const int register = 2131362019;
+			// aapt resource value: 0x7f0a00e6
+			public const int register = 2131362022;
 			
 			// aapt resource value: 0x7f0a00db
 			public const int registerStudent = 2131362011;
@@ -3823,6 +3823,12 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a00d4
 			public const int studentLayout = 2131362004;
 			
+			// aapt resource value: 0x7f0a00e4
+			public const int studentRadioId = 2131362020;
+			
+			// aapt resource value: 0x7f0a00e3
+			public const int studentTeacherRadioId = 2131362019;
+			
 			// aapt resource value: 0x7f0a00c6
 			public const int subject1 = 2131361990;
 			
@@ -3849,6 +3855,9 @@ namespace FinalProject_StudentHelper
 			
 			// aapt resource value: 0x7f0a00c3
 			public const int teacherLayout = 2131361987;
+			
+			// aapt resource value: 0x7f0a00e5
+			public const int teacherRadioId = 2131362021;
 			
 			// aapt resource value: 0x7f0a0021
 			public const int text = 2131361825;
@@ -3937,8 +3946,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a001b
 			public const int view_offset_helper = 2131361819;
 			
-			// aapt resource value: 0x7f0a00e4
-			public const int visible = 2131362020;
+			// aapt resource value: 0x7f0a00e7
+			public const int visible = 2131362023;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int withText = 2131361859;

@@ -47,18 +47,18 @@ namespace FinalProject_StudentHelper
         public const string CreateStudentTableQuery = "CREATE TABLE " + StudentTable + " ("
             + ColumnName + " TEXT," + ColumnPwd + " Text," + ColumnEmail + " VARCHAR2(20)," 
             + ColumnAge + " Text," + ColumnGender + " Text," + ColumnContact + " Number(11),"
-            + ColumnCollege + " Text," + ColumnYear + " Number(5)," + ColumnField + " Text,)";
+            + ColumnCollege + " Text," + ColumnYear + " Number(5)," + ColumnField + " Text)";
 
      //Teacher Query
         public const string CreateTeacherTableQuery = "CREATE TABLE " + TeacherTable + " ("
-             + ColumnName + " TEXT," + ColumnPwd + " Text," + ColumnEmail + " VARCHAR2(20),"
-             + ColumnAge + " Text," + ColumnGender + " Text," + ColumnContact + " Number(11),"
+             + ColumnName + " TEXT," + ColumnPwd + " Text," + ColumnEmail + " VARCHAR2,"
+             + ColumnAge + " Text," + ColumnGender + " Text," + ColumnContact + " Number,"
             + ColumnSubject1 + " Text," + ColumnSubject2 + " Text," + ColumnExperience + " int," 
             + ColumnBio + " Text," + ColumnIndividualSession+ " Boolean," + ColumnGroupSession + " Boolean,"
-            + ColumnTutoring + " Boolean," + ColumnVerification + " Boolean,)";
+            + ColumnTutoring + " Boolean," + ColumnVerification + " Boolean)";
         //Admin Query
         public const string CreateAdminTableQuery = "CREATE TABLE " + VerificationTable + " ("
-              + ColumnTeacherId + " TEXT, )";
+              + ColumnTeacherId + " TEXT )";
 
         SQLiteDatabase myDBObj;
         Context myContext;
@@ -80,7 +80,7 @@ namespace FinalProject_StudentHelper
             throw new NotImplementedException();
         }
         // Student Insert Function
-        public void insertValueStudent(string userNameValue, string pwdValue, string emailValue, string ageValue, string genderValue, long contactValue, string collegeValue, int yearValue, string fieldValue  )
+        public void insertValueStudent(string userNameValue, string pwdValue, string emailValue, string ageValue, string genderValue, string contactValue, string collegeValue, int yearValue, string fieldValue  )
         {
             String insertSQL = "insert into " + StudentTable + " values ('" + userNameValue + "'" + "," + "'" + pwdValue + "'" + "," 
                 + "'" + emailValue + "'" + "," + "'" + ageValue + "'" + "," + "'" + genderValue + "'" + "," 
@@ -90,7 +90,7 @@ namespace FinalProject_StudentHelper
             Console.WriteLine("Insert SQL " + insertSQL);
             myDBObj.ExecSQL(insertSQL);
         }
-        public void insertValueTeacher(string userNameValue, string pwdValue, string emailValue, string ageValue, string genderValue, long contactValue, string subject1Value, string subject2Value, int experienceValue, string bioValue, Boolean individualSession, Boolean groupSession, Boolean homeTutor, Boolean Verification)
+        public void insertValueTeacher(string userNameValue, string pwdValue, string emailValue, string ageValue, string genderValue, string contactValue, string subject1Value, string subject2Value, int experienceValue, string bioValue, Boolean individualSession, Boolean groupSession, Boolean homeTutor, Boolean Verification)
         {
             String insertSQL = "insert into " + TeacherTable + " values ('" + userNameValue + "'" + "," + "'" + pwdValue + "'" + ","
                 + "'" + emailValue + "'" + "," + "'" + ageValue + "'" + "," + "'" + genderValue + "'" + "," 
