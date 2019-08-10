@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeContainer"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/i1"
+    android:backgroundTint = "#7f2F4088"
+    android:backgroundTintMode = "src_over" >
+    
+    <LinearLayout
+        android:id="@+id/teacherLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:scrollbars="vertical"
+        android:visibility="visible">
+       <TextView
+        android:id="@+id/OneMoreStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
+        android:textStyle="bold"
+        android:textSize="28dp"
+        android:fontFamily="monospace"
+        android:textColor="#fff"
+        android:text = "One more Step..."/>
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding = "10dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft = "-25dp">
+            <Button
+                android:id="@+id/subject1"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text = ""
+                android:background = "@drawable/mysubbutton"
+                android:textColor = "@android:color/holo_red_dark"
+                android:textStyle="bold"   
+                android:layout_marginRight="5dp"
+                android:drawableLeft="@drawable/crossicondrawable"    />
+            <Button
+                android:id="@+id/subject2"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:text = ""
+                android:background = "@drawable/mysubbutton"
+                android:textColor = "@android:color/holo_red_dark"
+                android:drawableLeft="@drawable/crossicondrawable"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/AddSubjectsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop = "-30dp">
+
+            <EditText
+                android:id="@+id/SubjectsText"
+                android:layout_width="255dp"
+                android:layout_height="45dp"
+                android:background="@drawable/myedittext"
+                android:textColorHint="#A9A9A9"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:hint=" Subject (Upto 2)"
+                android:layout_marginTop="25dp" />
+            <Button
+                android:id = "@+id/AddSubjectButton"
+                android:layout_marginTop="22dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background = "@android:drawable/ic_input_add"    />
+        </LinearLayout>
+        <EditText
+            android:layout_marginLeft="0dp"
+            android:id="@+id/ExperienceID"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:background="@drawable/myedittext"
+            android:textColorHint="#A9A9A9"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:hint=" Previous Experience(in months)"
+            android:layout_marginTop="13dp"
+            android:inputType="number" />
+        <EditText
+            android:layout_marginLeft="0dp"
+            android:id="@+id/BioID"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:background="@drawable/myedittext"
+            android:textColorHint="#A9A9A9"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:hint=" Add Something About Yourself!!"
+            android:layout_marginTop="13dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="0dp">
+            <CheckBox
+                android:id="@+id/checkGroupId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="14dp"
+                android:text="Group Sessions"/>
+            <CheckBox
+                android:id="@+id/checkInvidualID"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="14dp"
+                android:text="Individual Session"/> 
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:text="Are you available for Home Tutoring?"/>
+        <RadioGroup
+            android:id = "@+id/radioHomeTutorId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"    >
+            <RadioButton
+                android:id="@+id/radioYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Yes"
+                android:textSize="14dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="50dp"/>
+            <RadioButton
+                android:id="@+id/radioNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textColor="#fff"
+                android:textSize="14dp"                
+                android:text="No" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/verificationId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:textSize="14dp"
+            android:text="Send your profile to admin for verification"   />
+        <Button
+            android:id="@+id/registerTeacher"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:background="@drawable/mybutton"
+            android:layout_marginTop="10dp"
+            android:text="Register"
+            android:textStyle="bold"
+            android:textColor="#ffffff"    />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/studentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible">
+        <TextView
+        android:id="@+id/OneMoreStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-50dp"
+        android:layout_marginBottom="25dp"
+        android:textStyle="bold"
+        android:textSize="28dp"
+        android:fontFamily="monospace"
+        android:textColor="#fff"
+        android:text = "One more Step..."/>
+        <EditText
+            android:id="@+id/nameSchoolCollegeID"    
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:background="#1Affffff"
+            android:textColorHint="#A9A9A9"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:hint="School/College Name"
+            android:layout_marginTop="0dp"
+            android:inputType="textMultiLine" />
+        <RadioGroup
+            android:id="@+id/radioSchoolCollegeID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radioSchoolId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In School"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="50dp"/>
+            <RadioButton
+                android:id="@+id/radioCollegeId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="In College" />
+        </RadioGroup>
+        <EditText
+            android:id="@+id/ClassOrYearId"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:background="#1Affffff"
+            android:textColorHint="#A9A9A9"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:hint=" Class/Year"
+            android:layout_marginTop="20dp" />
+        <EditText
+            android:id="@+id/FieldId"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:background="#1Affffff"
+            android:textColorHint="#A9A9A9"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:hint=" Study Field"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/registerStudent"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:background="@drawable/mybutton"
+            android:layout_marginTop="40dp"
+            android:text="Register"
+            android:textStyle="bold"
+            android:textColor="#ffffff"    />
+    </LinearLayout>
+</RelativeLayout>

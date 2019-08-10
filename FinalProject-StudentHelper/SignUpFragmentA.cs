@@ -28,6 +28,7 @@ namespace FinalProject_StudentHelper
             // Use this to return your custom view for this Fragment
             View myView = inflater.Inflate(Resource.Layout.SignUpTabA, container, false);
             Button nextFrag = myView.FindViewById<Button>(Resource.Id.register);
+
             EditText userName = myView.FindViewById<EditText>(Resource.Id.userNameID);
             EditText passWord = myView.FindViewById<EditText>(Resource.Id.passwordID);
             EditText eMail = myView.FindViewById<EditText>(Resource.Id.emailID);

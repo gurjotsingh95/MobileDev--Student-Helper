@@ -20,7 +20,7 @@ namespace FinalProject_StudentHelper
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.SignUpTabB);
+            SetContentView(Resource.Layout.SignUp);
             Button addSubButton = FindViewById<Button>(Resource.Id.AddSubjectButton);
             Button registerTeacherButton = FindViewById<Button>(Resource.Id.registerTeacher);
             Button registerStudentButton = FindViewById<Button>(Resource.Id.registerStudent);
