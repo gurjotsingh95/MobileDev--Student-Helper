@@ -110,12 +110,14 @@
             android:orientation="horizontal"
             android:layout_marginLeft="0dp">
             <CheckBox
+                android:id="@+id/checkGroupId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:textSize="14dp"
                 android:text="Group Sessions"/>
             <CheckBox
+                android:id="@+id/checkInvidualID"
                 android:layout_marginLeft="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -133,11 +135,12 @@
             android:textSize="16dp"
             android:text="Are you available for Home Tutoring?"/>
         <RadioGroup
+            android:id = "@+id/radioHomeTutorId"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"    >
             <RadioButton
-                android:id="@+id/radio_red"
+                android:id="@+id/radioYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
@@ -146,7 +149,7 @@
                 android:layout_marginLeft="80dp"
                 android:layout_marginRight="50dp"/>
             <RadioButton
-                android:id="@+id/radio_blue"
+                android:id="@+id/radioNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -156,6 +159,7 @@
         </RadioGroup>
 
         <CheckBox
+            android:id="@+id/verificationId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="-20dp"
@@ -192,8 +196,7 @@
         android:textColor="#fff"
         android:text = "One more Step..."/>
         <EditText
-            android:id="@+id/nameSchoolCollegeID"
-            
+            android:id="@+id/nameSchoolCollegeID"    
             android:layout_width="300dp"
             android:layout_height="100dp"
             android:background="#1Affffff"

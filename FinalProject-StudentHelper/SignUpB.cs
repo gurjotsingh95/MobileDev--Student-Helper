@@ -24,25 +24,48 @@ namespace FinalProject_StudentHelper
             Button registerTeacherButton = FindViewById<Button>(Resource.Id.registerTeacher);
             Button registerStudentButton = FindViewById<Button>(Resource.Id.registerStudent);
 
-            long contact = Intent.GetLongExtra("contactText" , 9999999999);
             var userName = Intent.GetStringExtra("userNameText");
             var passWord = Intent.GetStringExtra("passWordText");
             var eMail = Intent.GetStringExtra("eMailText");
             var age = Intent.GetStringExtra("ageText");
             var gender = Intent.GetStringExtra("genderText");
+            long contact = Intent.GetLongExtra("contactText", 9999999999);
+
 
             registerTeacherButton.Click += delegate {
+
                 Button subject1 = FindViewById<Button>(Resource.Id.subject1);
                 Button subject2 = FindViewById<Button>(Resource.Id.subject2);
+
                 EditText prevExperience = FindViewById<EditText>(Resource.Id.ExperienceID);
                 EditText bio = FindViewById<EditText>(Resource.Id.BioID);
+
+                RadioGroup homeTutor = FindViewById<RadioGroup>(Resource.Id.radioHomeTutorId);
+                RadioButton selectedSchoolOrCollege = FindViewById<RadioButton>(homeTutor.CheckedRadioButtonId);
+
+                CheckBox individualSessionCheck = FindViewById<CheckBox>(Resource.Id.checkInvidualID);
+                CheckBox groupSessionCheck = FindViewById<CheckBox>(Resource.Id.checkGroupId);
+                CheckBox verificationCheck = FindViewById<CheckBox>(Resource.Id.verificationId);
+
+                if(verificationCheck.Checked)
+                {
+                    //call insert to teacher db and insert to admin db
+                }
+                else
+                {
+                    //call insert to teach table
+                }
             };
 
 
             registerStudentButton.Click += delegate {
-                EditText schoolCollegeName = FindViewById<EditText>(Resource.Id.nameSchoolCollegeId);
-                EditText classOrYear = FindViewById<EditText>(Resource.Id.classOrYearId);
-                EditText studyField = FindViewById<EditText>(Resource.Id.FieldID);
+                EditText schoolCollegeName = FindViewById<EditText>(Resource.Id.nameSchoolCollegeID);
+                EditText classOrYear = FindViewById<EditText>(Resource.Id.ClassOrYearId);
+                EditText studyField = FindViewById<EditText>(Resource.Id.FieldId);
+
+                RadioGroup inSchoolOrCollege = FindViewById<RadioGroup>(Resource.Id.radioSchoolCollegeID);
+                RadioButton selectedSchoolOrCollege = FindViewById<RadioButton>(inSchoolOrCollege.CheckedRadioButtonId);
+
             };
 
 
