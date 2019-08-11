@@ -98,6 +98,7 @@ namespace FinalProject_StudentHelper
 
                 EditText prevExperience = FindViewById<EditText>(Resource.Id.ExperienceID);
                 EditText bio = FindViewById<EditText>(Resource.Id.BioID);
+
                 int exp = Convert.ToInt32(prevExperience.Text);
                 var biography = bio.Text;
 
@@ -121,34 +122,28 @@ namespace FinalProject_StudentHelper
                 
                 if(verificationCheck.Checked)
                 {
-                    Console.WriteLine("USERNAME FROM SIGN UP A PAGE ON SIGN UP B ---"+userName);
-                    //call insert to teacher db and insert to admin db
                     sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1.Text, subject2.Text, exp, biography, individualSess, groupSess, homeTutorValue, true);
                     sqlFunctions.insertValueAdmin(eMail);
+                    Intent login = new Intent(this, typeof(MainActivity));
+                    StartActivity(login);
+
                 }
                 else
                 {
-                    //call insert to teach table
                     sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1Value, subject2Value, exp, biography, individualSess, groupSess, homeTutorValue, true);
-
                 }
             };
-
-
             registerStudentButton.Click += delegate {
                 EditText schoolCollegeName = FindViewById<EditText>(Resource.Id.nameSchoolCollegeID);
                 EditText classOrYear = FindViewById<EditText>(Resource.Id.ClassOrYearId);
                 EditText studyField = FindViewById<EditText>(Resource.Id.FieldId);
+                int classYear = Convert.ToInt32(classOrYear.Text);
 
                 RadioGroup inSchoolOrCollege = FindViewById<RadioGroup>(Resource.Id.radioSchoolCollegeID);
                 RadioButton selectedSchoolOrCollege = FindViewById<RadioButton>(inSchoolOrCollege.CheckedRadioButtonId);
 
-
-
+                sqlFunctions.insertValueStudent(userName, passWord, eMail, age, gender, contact, schoolCollegeName.Text, classYear, studyField.Text);
             };
-
-
-
         }
         protected void deleteSubject(Button subjectClicked)
         {
@@ -156,31 +151,10 @@ namespace FinalProject_StudentHelper
             subjectClicked.Text = "";
             subjectClicked.Enabled = false;
         }
-        /*      protected void addSubjectToView()
-              {
-                  LinearLayout buttonLayout = FindViewById<LinearLayout>(Resource.Id.buttonLayout);
-
-                  //     LinearLayout l1 = new LinearLayout(this);
-                  Button addButton = new Button(this);
-                  Button addButton2 = new Button(this);
-
+        /*        LinearLayout buttonLayout = FindViewById<LinearLayout>(Resource.Id.buttonLayout);
+                  Button addButton = new Button(this)
                   addButton.Text = "subject1";
-                  addButton2.Text = "subject2";
-
-                  //    l1.AddView(addButton);
-                  buttonLayout.AddView(addButton);
-                  buttonLayout.AddView(addButton2);
-
-                        if(subject1.Enabled == false)
-                {
-                    subject1.Text = subjectValue;
-                    subject1Value = subjectValue;
-                    subject1.Enabled = true;
-                    subjectName.Text = "";
-                    subject1.Visibility = ViewStates.Visible;
-
-                }
-        
-        } */
+            //    l1.AddView(addButton);
+                  buttonLayout.AddView(addButton); */
     }
 }

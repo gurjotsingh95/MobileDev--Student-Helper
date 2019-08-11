@@ -217,7 +217,7 @@
                 android:id="@+id/radioSchoolId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="In School"
+                android:text="School"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="50dp"/>
             <RadioButton
@@ -225,7 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:text="In College" />
+                android:text="College" />
         </RadioGroup>
         <EditText
             android:id="@+id/ClassOrYearId"

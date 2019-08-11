@@ -13,38 +13,25 @@ namespace FinalProject_StudentHelper
     public class MainActivity : Activity
     {
         Fragment[] _fragmentsArray;
-  //      string name = "Welcome To my App";
-
-
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            // Set our view from the "main" layout resource
-            Button nextFrag = FindViewById<Button>(Resource.Id.register);
-
             RequestWindowFeature(Android.Views.WindowFeatures.ActionBar);
             //enable navigation mode to support tab layout
             this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
             base.OnCreate(savedInstanceState);
-
             SetContentView(Resource.Layout.activity_main);
-
 
             _fragmentsArray = new Fragment[]
             {
-            new SignInFragment(""),
+            new SignInFragment(),
             new SignUpFragmentA(),
             };
-
 
             AddTabToActionBar("Sign In"); //First Tab
             AddTabToActionBar("Sign Up"); //First Tab
 
-
         }
-
-        [Obsolete]
         void AddTabToActionBar(string tabTitle)
         {
             Android.App.ActionBar.Tab tab = ActionBar.NewTab();
@@ -56,9 +43,6 @@ namespace FinalProject_StudentHelper
 
             ActionBar.AddTab(tab);
         }
-
-
-
         void TabOnTabSelected(object sender, Android.App.ActionBar.TabEventArgs tabEventArgs)
         {
             Android.App.ActionBar.Tab tab = (Android.App.ActionBar.Tab)sender;
@@ -68,8 +52,5 @@ namespace FinalProject_StudentHelper
 
             tabEventArgs.FragmentTransaction.Replace(Resource.Id.frameLayout1, frag);
         }
-
-
-
     }
 }

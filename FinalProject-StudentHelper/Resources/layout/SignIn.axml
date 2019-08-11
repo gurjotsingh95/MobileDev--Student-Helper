@@ -47,7 +47,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="15dp"
                 android:padding="10dp"
-                android:hint="Username"
+                android:hint="Username(Your Email)"
                 android:textColor="#ffffff"
 
 	        />
@@ -63,7 +63,23 @@
                 android:padding="10dp"
                 android:hint="Password"
              />
-
+            <RadioGroup
+                android:id="@+id/loginType"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/teacherLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teacher" /> 
+                <RadioButton
+                    android:id = "@+id/studentLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student" />
+                </RadioGroup>
             <Button
                 android:id="@+id/loginBtnID"
                 android:layout_width="300dp"
@@ -72,15 +88,7 @@
                 android:textColor="#ffffff"
                 android:layout_marginBottom="30dp"
                 android:text="Login"
-                android:textStyle="bold"
-            />
+                android:textStyle="bold"    />
         </LinearLayout>
     </ScrollView>  
-    <TextView
-        
-        android:id="@+id/myNameIdl"
-        android:layout_width="200dp" 
-        android:layout_height="50dp"
-          
-    />
 </LinearLayout>

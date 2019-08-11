@@ -17,32 +17,41 @@ namespace FinalProject_StudentHelper
 
     public class SignInFragment : Fragment
     {
-
-        public String myName;
-
+/*      public String myName;
         public SignInFragment(string name)
         {
             myName = name;
-        }
-
+        }*/
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
-            
         }
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // Use this to return your custom view for this Fragment
-            View myView = inflater.Inflate(Resource.Layout.SignIn, container, false);
+            DBHelper sqlfunctions = new DBHelper(Context);
 
-            myView.FindViewById<TextView>(Resource.Id.myNameIdl).Text = myName;
+            View myView = inflater.Inflate(Resource.Layout.SignIn, container, false);
+            //          myView.FindViewById<TextView>(Resource.Id.myNameIdl).Text = myName;
+            Button login = myView.FindViewById<Button>(Resource.Id.loginBtnID);
+            login.Click += delegate
+            {
+                RadioGroup loginTypeRG = myView.FindViewById<RadioGroup>(Resource.Id.loginType);
+                //table 
+                var loginTo = myView.FindViewById<RadioButton>(loginTypeRG.CheckedRadioButtonId).Text;
+                var eMailEntered = (myView.FindViewById<EditText>(Resource.Id.userNameID)).Text;
+                var passWordEntered = (myView.FindViewById<EditText>(Resource.Id.passwordID)).Text;
+                Boolean loginVerified = sqlfunctions.LoginValidation(eMailEntered, passWordEntered, loginTo);
+                if(loginVerified)
+                {
+                    Intent teacherProfile = new Intent();
+                }
+                else
+                {
+                    Intent studentProfile = new Intent();
+                }
+            };
 
             return myView;
-
-            //return base.OnCreateView(inflater, container, savedInstanceState);
         }
     }
 }

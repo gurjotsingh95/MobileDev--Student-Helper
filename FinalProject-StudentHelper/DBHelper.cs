@@ -11,7 +11,7 @@ namespace FinalProject_StudentHelper
     {
         private static string _DatabaseName = "mydatabase.db";
 
-        private const string StudentTable = "student";
+        private const string StudentTable = "Student";
         private const string TeacherTable = "Teacher";
         private const string VerificationTable = "Admin";
 
@@ -108,6 +108,20 @@ namespace FinalProject_StudentHelper
             System.Console.WriteLine("Insert SQL " + insertSQL);
             myDBObj.ExecSQL(insertSQL);
         }
+        public bool LoginValidation(string enteredEmail, string enteredPassword, string tableName)
+        {
+            string loginValidationQuery = "Select * from " + tableName + " where " + ColumnEmail + "=" + "'" + enteredEmail + "'"
+                + " AND " + ColumnPwd + "=" + "'" + enteredPassword + "'";
 
+            ICursor result = myDBObj.RawQuery(loginValidationQuery, null);
+            if (result.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
