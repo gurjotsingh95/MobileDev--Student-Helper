@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background = "#ffffff"
+     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/profileback2">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop= "28dp"  
+            android:layout_marginRight = "35dp"
+            android:layout_marginLeft = "-30dp" >
+
+            <EditText
+                android:paddingLeft="19dp"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:textSize="23dp"
+                android:textStyle = "italic"
+                android:text = "Kiran Gurjot"
+                android:textColor = "#000000"
+                android:background="@drawable/myprofiletext"    />
+            <EditText
+                android:layout_marginTop = "8dp"
+                android:paddingLeft="15dp"
+                android:layout_width="160dp"
+                android:layout_height="85dp"
+                android:text="Balb bla bla bla bla bla bla bla bal"
+                android:textSize="21dp"
+                android:background="@drawable/myprofiletext"
+                android:textColor = "#000000"
+                android:inputType="none|textMultiLine" />
+        </LinearLayout>
+        <Refractored.Controls.CircleImageView
+            android:layout_marginTop="30dp"
+            android:layout_marginRight = "-35dp"
+            android:layout_width="100dp"
+            android:layout_height="105dp"
+            android:src ="@drawable/icon"
+            app:civ_fill_color = "#ffffff" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="382dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="2dp"  >
+            
+            <Button
+                android:layout_marginTop="8dp"
+                android:id="@+id/Edit"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="0dp"
+                android:textSize = "15dp"
+                android:textColor = "#000000"
+                android:background = "@drawable/mybutton2"
+                android:text = "Edit Profile"/>
+            <EditText
+                android:layout_below = "@id/Edit"
+                android:id="@+id/EmailID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/myprofiletext"
+                android:textColorHint="#000000"
+                android:textColor="#000000"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="6dp"
+                android:padding="10dp"
+                android:hint="Email"    />
+            <EditText
+                android:layout_below = "@id/EmailID"
+                android:id="@+id/PasswordID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="@drawable/myprofiletext"
+                android:textColorHint="#000000"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp"
+                android:padding="10dp"
+                android:hint="Password"   />
+            <EditText
+                android:layout_below = "@id/PasswordID"
+                android:id="@+id/AgeID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="#1Affffff"
+                android:textColorHint="#000000"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp"
+                android:padding="10dp"
+                android:hint="Age"
+	        />
+            <EditText
+                android:layout_below="@id/AgeID"
+                android:id="@+id/GenderID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="#1Affffff"
+                android:textColorHint="#000000"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp"
+                android:padding="10dp"
+                android:hint="Gender"
+	        />
+            <EditText
+                android:layout_below="@id/GenderID"
+                android:id="@+id/ContactID"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:background="#1Affffff"
+                android:textColorHint="#000000"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp"
+                android:padding="10dp"
+                android:hint="Contact"
+	        />
+            <LinearLayout
+                android:layout_below="@id/ContactID"
+                android:id = "@+id/subjectsLayout"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/subject1ID"
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:textColorHint="#000000"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="2dp"
+                    android:padding="3dp"
+                    android:hint="Subject 1"
+	        />
+                <EditText
+                    android:id="@+id/subject2ID"
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:background="#ffffff"
+                    android:textColorHint="#000000"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="30dp"
+                    android:padding="3dp"
+                    android:hint="Subject 2"
+	        />
+            </LinearLayout>
+
+            <Button
+                android:layout_below = "@+id/subjectsLayout"
+                android:id="@+id/Save"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:background="@drawable/mybutton"
+                android:textColor="#fff"
+                android:layout_marginBottom="10dp"
+                android:text="Save"
+                android:textSize = "15dp"
+                android:textStyle="bold"   
+                android:visibility = "invisible"    />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
