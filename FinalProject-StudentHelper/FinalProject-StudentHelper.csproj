@@ -130,6 +130,9 @@
     <AndroidResource Include="Resources\drawable\myProfileText.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\edit1.png" />
+    <AndroidResource Include="Resources\drawable\edit.png" />
+    <AndroidResource Include="Resources\drawable\img.jpeg" />
     <Content Include="Resources\layout\IGNORE FILE - SignUpTabB.xml">
       <SubType>Designer</SubType>
     </Content>

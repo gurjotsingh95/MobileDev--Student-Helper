@@ -8,13 +8,13 @@
     android:backgroundTintMode = "src_over" >
     <ScrollView
         android:layout_width="382dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp" >
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
                 android:fontFamily="cursive"
                 android:text = "Welcome"
                 android:textColor = "#ffffff"
-                android:layout_marginTop="40dp"/>
+                android:layout_marginTop="40dp" />
 
             <TextView
                 android:id="@+id/title"
@@ -37,7 +37,7 @@
                 android:fontFamily="monospace"
                 android:textColor="#ffffff"
                 android:layout_marginTop="30dp"
-                android:text = "Let's get you logged In..."/>
+                android:text = "Let's get you logged In..." />
             <EditText
                 android:id="@+id/userNameID"
                 android:layout_width="300dp"
