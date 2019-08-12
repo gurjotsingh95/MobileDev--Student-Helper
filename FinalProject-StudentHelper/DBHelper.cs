@@ -97,7 +97,6 @@ namespace FinalProject_StudentHelper
                 + "'" + contactValue + "'" + "," + "'" + subject1Value + "'" + "," + "'" + subject2Value + "'" + "," 
                 + "'" + experienceValue + "'" + "," + "'" + bioValue + "'" + "," + "'" + individualSession + "'" + "," 
                 + "'" + groupSession + "'" + "," + "'" + homeTutor + "'" + "," + "'" + Verification + "'" + ");";
-
             Console.WriteLine("Insert SQL ===" + insertSQL);
             myDBObj.ExecSQL(insertSQL);
 
@@ -131,6 +130,17 @@ namespace FinalProject_StudentHelper
 
             ICursor result = myDBObj.RawQuery(loginValidationQuery, null);
             return result;
+        }
+        public ICursor searchResult(string columnNameSelected, string searchTerm)
+        {
+            string searchQuery = "Select * from " + TeacherTable + " where " + columnNameSelected + " LIKE " + "'%" + searchTerm + "%'";
+
+            ICursor result = myDBObj.RawQuery(searchQuery, null);
+            return result;
+        }
+        public int ratingCalc()
+        {
+            return 1;
         }
     }
 }
