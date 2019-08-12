@@ -37,28 +37,37 @@ namespace FinalProject_StudentHelper
             {
                 RadioGroup loginTypeRG = myView.FindViewById<RadioGroup>(Resource.Id.loginType);
                 //table 
-                var loginTo = myView.FindViewById<RadioButton>(loginTypeRG.CheckedRadioButtonId).Text;
-                var eMailEntered = (myView.FindViewById<EditText>(Resource.Id.userNameID)).Text;
-                var passWordEntered = (myView.FindViewById<EditText>(Resource.Id.passwordID)).Text;
-                Boolean loginVerified = sqlfunctions.LoginValidation(eMailEntered, passWordEntered, loginTo);
-                if(loginVerified && (loginTo == "Teacher"))
+                RadioButton loginToRB = myView.FindViewById<RadioButton>(loginTypeRG.CheckedRadioButtonId);
+                var loginTo = "";
+                if (loginToRB != null)
                 {
-                    Intent teacherProfile = new Intent(Context, typeof(teachProfile));
-                    teacherProfile.PutExtra("userEmail", eMailEntered);
-                    teacherProfile.PutExtra("password", passWordEntered);
-                    teacherProfile.PutExtra("loginAs", loginTo);
-                    StartActivity(teacherProfile);
-                }
-                else if(loginVerified && (loginTo=="Student"))
-                {
-                    Intent studentProfile = new Intent(Context, typeof(studentProfile));
-                    studentProfile.PutExtra("userEmail", eMailEntered);
-                    studentProfile.PutExtra("password", passWordEntered);
-                    studentProfile.PutExtra("loginAs", loginTo);
-                    StartActivity(studentProfile);
-                } else
-                {
-                    Toast.MakeText(Context, "Incorrect Username/Password combination", ToastLength.Short).Show();
+                    Toast.MakeText(Context, "Please Choose you login Type", ToastLength.Short).Show();
+                    loginTo = loginToRB.Text;
+                    var eMailEntered = (myView.FindViewById<EditText>(Resource.Id.userNameID)).Text;
+                    var passWordEntered = (myView.FindViewById<EditText>(Resource.Id.passwordID)).Text;
+                    Boolean loginVerified = sqlfunctions.LoginValidation(eMailEntered, passWordEntered, loginTo);
+                    Console.WriteLine("Below checkin login condition");
+                    if (loginVerified && (loginTo == "Teacher"))
+                    {
+                        Console.WriteLine("After checking login condition");
+                        Intent teacherProfile = new Intent(Context, typeof(teachProfile));
+                        teacherProfile.PutExtra("userEmail", eMailEntered);
+                        teacherProfile.PutExtra("password", passWordEntered);
+                        teacherProfile.PutExtra("loginAs", loginTo);
+                        StartActivity(teacherProfile);
+                    }
+                    else if (loginVerified && (loginTo == "Student"))
+                    {
+                        Intent studentProfile = new Intent(Context, typeof(studentProfile));
+                        studentProfile.PutExtra("userEmail", eMailEntered);
+                        studentProfile.PutExtra("password", passWordEntered);
+                        studentProfile.PutExtra("loginAs", loginTo);
+                        StartActivity(studentProfile);
+                    }
+                    else
+                    {
+                        Toast.MakeText(Context, "Incorrect Username/Password combination", ToastLength.Short).Show();
+                    }
                 }
             };
 

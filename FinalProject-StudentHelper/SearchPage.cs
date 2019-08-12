@@ -10,7 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-
+using Android.Database;
 namespace FinalProject_StudentHelper
 {
     [Activity(Label = "SearchPage")]
@@ -22,10 +22,17 @@ namespace FinalProject_StudentHelper
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource
-            myUserList.Add(new UserObject("TEST NAME", "Test EMAIL", 3));
-
             SetContentView(Resource.Layout.Search);
+
+            
+            DBHelper sqlFunctions = new DBHelper(this);
+            ICursor details = sqlFunctions.searchResult("Name", "");
+
+            // Set our view from the "main" layout resource
+            while (details.MoveToNext())
+            {             
+                myUserList.Add(new UserObject(details.GetString(details.GetColumnIndexOrThrow("Name")), details.GetString(details.GetColumnIndexOrThrow("Email")), 3));
+            }
 
             myList = FindViewById<ListView>(Resource.Id.listViewID);
 
@@ -40,12 +47,33 @@ namespace FinalProject_StudentHelper
         public void mySearchMethod(object sender, SearchView.QueryTextChangeEventArgs e)
         {
             RadioGroup searchColumn = FindViewById<RadioGroup>(Resource.Id.searchTypeRG);
-            var columnName = FindViewById<RadioButton>(searchColumn.Id).Text;
+            RadioButton nameSearch = FindViewById<RadioButton>(Resource.Id.NameSearchID);
+            nameSearch.Checked = true;
+            var columnName = (FindViewById<RadioButton>(searchColumn.CheckedRadioButtonId)).Text;
             DBHelper sqlFunctions = new DBHelper(this);
             var mySearchValue = e.NewText;
             //call search func
             System.Console.WriteLine("Search Text is :  is \n\n " + mySearchValue);
-            sqlFunctions.searchResult(columnName, mySearchValue);
+            ICursor newDetails = sqlFunctions.searchResult(columnName, mySearchValue);
+            if(newDetails.Count != 0)
+            {
+                myUserList.Clear();
+
+            }
+            while (newDetails.MoveToNext())
+            {
+                myUserList.Add(new UserObject(newDetails.GetString(newDetails.GetColumnIndexOrThrow("Name")), newDetails.GetString(newDetails.GetColumnIndexOrThrow("Email")), 3));
+            }
+
+            myList = FindViewById<ListView>(Resource.Id.listViewID);
+
+            var myAdapter = new MyCustomAdapter(this, myUserList);
+            myList.SetAdapter(myAdapter);
+            myList.ItemClick += myItemClickMethod;
+
+            mySearch = FindViewById<SearchView>(Resource.Id.searchID);
+            //Search Events
+            mySearch.QueryTextChange += mySearchMethod;
         }
         public void myItemClickMethod(object sender, AdapterView.ItemClickEventArgs e)
         {

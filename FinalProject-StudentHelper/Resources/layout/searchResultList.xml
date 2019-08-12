@@ -2,16 +2,15 @@
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android" 
     android:orientation="horizontal"
-    android:layout_width="match_parent" 
+    android:layout_width="500dp" 
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
-    android:padding="20dp" 
+    android:padding="10dp" 
     android:background="@drawable/myedittext">
-    
     <ImageView
         android:background="#00000000"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/myImage"
         android:src="@drawable/icon"     />
     <LinearLayout
@@ -21,9 +20,9 @@
 
         <TextView
             android:paddingLeft="10dp"
-            android:textSize="30dp"
+            android:textSize="27dp"
             android:background="@drawable/myedittext"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/searchName"
             android:layout_margin = "10dp"
@@ -32,9 +31,9 @@
         />
         <TextView
             android:paddingLeft="10dp"
-            android:textSize="30dp"
+            android:textSize="27dp"
             android:background="@drawable/myedittext"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/SearchEmail"
             android:layout_margin = "10dp"
@@ -46,7 +45,7 @@
             android:id="@+id/ratingbar"
             android:isIndicator="true"
             style="@style/Widget.AppCompat.RatingBar.Small"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="5"
@@ -57,8 +56,8 @@
 
         <Button
             android:layout_margin="10dp"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
             android:text="Add To Favourites"
             android:background="@drawable/mybutton"/>
     </LinearLayout>

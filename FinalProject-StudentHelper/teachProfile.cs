@@ -53,8 +53,6 @@ namespace FinalProject_StudentHelper
                 genderET.Text = details.GetString(details.GetColumnIndexOrThrow("gender"));
                 subject1ET.Text = details.GetString(details.GetColumnIndexOrThrow("Subject1"));
                 subject2ET.Text = details.GetString(details.GetColumnIndexOrThrow("Subject2"));
-
-
             }
             edit.Click += delegate
             {
@@ -69,6 +67,8 @@ namespace FinalProject_StudentHelper
                 subject2ET.Enabled = true;
                 edit.Enabled = false;
                 edit.Visibility = ViewStates.Invisible;
+                save.Enabled = true;
+                save.Visibility = ViewStates.Visible;
             };
             save.Click += delegate
             {
@@ -83,6 +83,8 @@ namespace FinalProject_StudentHelper
                 subject2ET.Enabled = false;
                 edit.Enabled = true;
                 edit.Visibility = ViewStates.Visible;
+                save.Enabled = false;
+                save.Visibility = ViewStates.Invisible;
             };
         }
     }

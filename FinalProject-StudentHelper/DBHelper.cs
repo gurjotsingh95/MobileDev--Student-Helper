@@ -41,7 +41,8 @@ namespace FinalProject_StudentHelper
         private const string ColumnGroupSession = "GroupSession";
         private const string ColumnTutoring = "HomeTutoring";
         private const string ColumnVerification = "PendingVerification";
-
+        private const string ColumnRating = "RatingValue";
+        private const string ColumnRatingNumber = "NumberOfRatings";
 
         //GeneralQuery             
         public const string CreateStudentTableQuery = "CREATE TABLE " + StudentTable + " ("
@@ -55,7 +56,7 @@ namespace FinalProject_StudentHelper
              + ColumnAge + " Text," + ColumnGender + " Text," + ColumnContact + " Number,"
             + ColumnSubject1 + " Text," + ColumnSubject2 + " Text," + ColumnExperience + " int," 
             + ColumnBio + " Text," + ColumnIndividualSession+ " Boolean," + ColumnGroupSession + " Boolean,"
-            + ColumnTutoring + " Boolean," + ColumnVerification + " Boolean)";
+            + ColumnTutoring + " Boolean," + ColumnVerification + " Boolean," +ColumnRating+ " int," +ColumnRatingNumber+ " int)";
         //Admin Query
         public const string CreateAdminTableQuery = "CREATE TABLE " + VerificationTable + " ("
               + ColumnTeacherId + " TEXT )";

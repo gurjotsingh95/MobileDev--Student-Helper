@@ -145,6 +145,8 @@ namespace FinalProject_StudentHelper
                 RadioButton selectedSchoolOrCollege = FindViewById<RadioButton>(inSchoolOrCollege.CheckedRadioButtonId);
 
                 sqlFunctions.insertValueStudent(userName, passWord, eMail, age, gender, contact, schoolCollegeName.Text, classYear, studyField.Text);
+                Intent login = new Intent(this, typeof(MainActivity));
+                StartActivity(login);
             };
         }
         protected void deleteSubject(Button subjectClicked)

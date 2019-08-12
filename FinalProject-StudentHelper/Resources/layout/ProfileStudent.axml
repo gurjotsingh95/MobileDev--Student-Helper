@@ -196,6 +196,12 @@
                 android:textStyle="bold"   
                 android:visibility = "invisible"   
             />
+            <Button
+                android:layout_below="@id/SFieldID"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+            android:id="@+id/searchPage"
+            android:background="#000"/>
         </RelativeLayout>
     </ScrollView>
 </LinearLayout>

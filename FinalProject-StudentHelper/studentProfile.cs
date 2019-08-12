@@ -20,6 +20,14 @@ namespace FinalProject_StudentHelper
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ProfileStudent);
 
+            Button but = FindViewById<Button>(Resource.Id.searchPage);
+            but.Click += delegate
+            {
+                Intent search = new Intent(this, typeof(SearchPage));
+                search.PutExtra("email", "a");
+                search.PutExtra("pass", "a");
+                StartActivity(search);
+            };
             // Create your application here
             /*private const string ColumnName = "Name";
         private const string ColumnPwd = "Password";
