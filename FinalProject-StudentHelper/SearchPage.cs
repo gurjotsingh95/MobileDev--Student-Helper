@@ -23,8 +23,12 @@ namespace FinalProject_StudentHelper
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Search);
-
-            
+            Button favourite = FindViewById<Button>(Resource.Id.advancedSearch);
+            favourite.Click += delegate
+            {
+                Intent fav = new Intent(this, typeof(favouriteTeacher));
+                StartActivity(fav);
+            };
             DBHelper sqlFunctions = new DBHelper(this);
             ICursor details = sqlFunctions.searchResult("Name", "");
 
@@ -39,9 +43,12 @@ namespace FinalProject_StudentHelper
             myList.SetAdapter(myAdapter);
             myList.ItemClick += myItemClickMethod;
 
+
+            Button favButton = FindViewById<Button>(Resource.Id.addToFav);
             mySearch = FindViewById<SearchView>(Resource.Id.searchID);
             //Search Events
             mySearch.QueryTextChange += mySearchMethod;
+ //           favButton.Click += myItemClickMethod;
         }
         public void mySearchMethod(object sender, SearchView.QueryTextChangeEventArgs e)
         {
@@ -78,6 +85,10 @@ namespace FinalProject_StudentHelper
         {
             System.Console.WriteLine("I am clicking on the list item \n\n");
             var indexValue = e.Position;
+            var myValue = myUserList[indexValue].searchname;
+            DBHelper sqlFunctions = new DBHelper(this);
+            Console.WriteLine("The chosen teacher is ===== " + myValue);
+            sqlFunctions.insertValueFav(myValue);
            // var myValue = movieArray[indexValue];
            // System.Console.WriteLine("Value is \n\n " + myValue);
         }

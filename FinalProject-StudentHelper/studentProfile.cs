@@ -28,8 +28,8 @@ namespace FinalProject_StudentHelper
                 search.PutExtra("pass", "a");
                 StartActivity(search);
             };
-            // Create your application here
-            /*private const string ColumnName = "Name";
+        // Create your application here
+       /*private const string ColumnName = "Name";
         private const string ColumnPwd = "Password";
         private const string ColumnEmail = "Email";
         private const string ColumnAge = "Age";

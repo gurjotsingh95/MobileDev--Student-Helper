@@ -14,6 +14,7 @@ namespace FinalProject_StudentHelper
         private const string StudentTable = "Student";
         private const string TeacherTable = "Teacher";
         private const string VerificationTable = "Admin";
+        private const string FavouriteTable = "Favourite";
 
         //Admin
         private const string ColumnTeacherId = "TeacherId";
@@ -60,6 +61,9 @@ namespace FinalProject_StudentHelper
         //Admin Query
         public const string CreateAdminTableQuery = "CREATE TABLE " + VerificationTable + " ("
               + ColumnTeacherId + " TEXT )";
+        //Favourite
+        public const string CreateFavTableQuery = "CREATE TABLE " + FavouriteTable + " ("
+      + ColumnEmail + " TEXT )";
 
         SQLiteDatabase myDBObj;
         Context myContext;
@@ -74,6 +78,7 @@ namespace FinalProject_StudentHelper
             db.ExecSQL(CreateStudentTableQuery);
             db.ExecSQL(CreateTeacherTableQuery);
             db.ExecSQL(CreateAdminTableQuery);
+            db.ExecSQL(CreateFavTableQuery);
             Console.WriteLine(CreateTeacherTableQuery);
         }
         public override void OnUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) // Step: 1 - 2:2
@@ -108,6 +113,12 @@ namespace FinalProject_StudentHelper
             System.Console.WriteLine("Insert SQL " + insertSQL);
             myDBObj.ExecSQL(insertSQL);
         }
+        public void insertValueFav(string teacherEmailValue)
+        {
+            String insertSQL = "insert into " + FavouriteTable + " values ('" + teacherEmailValue + "'" + ");";
+            System.Console.WriteLine("Insert SQL " + insertSQL);
+            myDBObj.ExecSQL(insertSQL);
+        }
         public bool LoginValidation(string enteredEmail, string enteredPassword, string tableName)
         {
             string loginValidationQuery = "Select * from " + tableName + " where " + ColumnEmail + "=" + "'" + enteredEmail + "'"
@@ -135,6 +146,17 @@ namespace FinalProject_StudentHelper
         public ICursor searchResult(string columnNameSelected, string searchTerm)
         {
             string searchQuery = "Select * from " + TeacherTable + " where " + columnNameSelected + " LIKE " + "'%" + searchTerm + "%'";
+
+            ICursor result = myDBObj.RawQuery(searchQuery, null);
+            return result;
+        }
+        public ICursor searchFavResult()
+        {
+            /*
+SELECT a1, a2, b1, b2
+FROM A
+INNER JOIN B on B.f = A.f;*/
+            string searchQuery = "Select * from " + FavouriteTable + " INNER JOIN " +TeacherTable+ " on " + FavouriteTable + ".Email = " + TeacherTable + ".Email" ;
 
             ICursor result = myDBObj.RawQuery(searchQuery, null);
             return result;
