@@ -90,13 +90,13 @@ namespace FinalProject_StudentHelper
             Console.WriteLine("Insert SQL " + insertSQL);
             myDBObj.ExecSQL(insertSQL);
         }
-        public void insertValueTeacher(string userNameValue, string pwdValue, string emailValue, string ageValue, string genderValue, string contactValue, string subject1Value, string subject2Value, int experienceValue, string bioValue, Boolean individualSession, Boolean groupSession, Boolean homeTutor, Boolean Verification)
+        public void insertValueTeacher(string userNameValue, string pwdValue, string emailValue, string ageValue, string genderValue, string contactValue, string subject1Value, string subject2Value, int experienceValue, string bioValue, Boolean individualSession, Boolean groupSession, Boolean homeTutor, Boolean Verification, int ratingValue, int ratingNumber)
         {
             String insertSQL = "insert into " + TeacherTable + " values ('" + userNameValue + "'" + "," + "'" + pwdValue + "'" + ","
                 + "'" + emailValue + "'" + "," + "'" + ageValue + "'" + "," + "'" + genderValue + "'" + "," 
                 + "'" + contactValue + "'" + "," + "'" + subject1Value + "'" + "," + "'" + subject2Value + "'" + "," 
                 + "'" + experienceValue + "'" + "," + "'" + bioValue + "'" + "," + "'" + individualSession + "'" + "," 
-                + "'" + groupSession + "'" + "," + "'" + homeTutor + "'" + "," + "'" + Verification + "'" + ");";
+                + "'" + groupSession + "'" + "," + "'" + homeTutor + "'" + "," + "'" + Verification + "'" + "," + "'" + ratingValue + "'" + "," + "'" + ratingNumber + "'" +");";
             Console.WriteLine("Insert SQL ===" + insertSQL);
             myDBObj.ExecSQL(insertSQL);
 

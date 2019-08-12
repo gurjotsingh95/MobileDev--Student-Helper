@@ -122,7 +122,7 @@ namespace FinalProject_StudentHelper
                 
                 if(verificationCheck.Checked)
                 {
-                    sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1.Text, subject2.Text, exp, biography, individualSess, groupSess, homeTutorValue, true);
+                    sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1.Text, subject2.Text, exp, biography, individualSess, groupSess, homeTutorValue, true, 1, 1);
                     sqlFunctions.insertValueAdmin(eMail);
                     Intent login = new Intent(this, typeof(MainActivity));
                     StartActivity(login);
@@ -130,7 +130,7 @@ namespace FinalProject_StudentHelper
                 }
                 else
                 {
-                    sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1Value, subject2Value, exp, biography, individualSess, groupSess, homeTutorValue, true);
+                    sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1Value, subject2Value, exp, biography, individualSess, groupSess, homeTutorValue, true, 0, 0);
                     Intent login = new Intent(this, typeof(MainActivity));
                     StartActivity(login);
                 }
