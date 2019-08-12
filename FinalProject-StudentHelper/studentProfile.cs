@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Database;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -20,25 +21,107 @@ namespace FinalProject_StudentHelper
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ProfileStudent);
 
-            Button but = FindViewById<Button>(Resource.Id.searchPage);
-            but.Click += delegate
+
+            Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner);
+
+            spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            var adapter = ArrayAdapter.CreateFromResource(
+                    this, Resource.Array.planets_array, Android.Resource.Layout.SimpleSpinnerItem);
+
+            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            spinner.Adapter = adapter;
+
+            var studentEmail = Intent.GetStringExtra("userEmail");
+            var studentPass = Intent.GetStringExtra("password");
+            var profileType = Intent.GetStringExtra("loginAs");
+
+
+            EditText nameET = FindViewById<EditText>(Resource.Id.Sname);
+            EditText collET = FindViewById<EditText>(Resource.Id.Sschool);
+            EditText emailET = FindViewById<EditText>(Resource.Id.SEmailID);
+            EditText passET = FindViewById<EditText>(Resource.Id.SPasswordID);
+            EditText ageET = FindViewById<EditText>(Resource.Id.SAgeID);
+            EditText contactET = FindViewById<EditText>(Resource.Id.SContactID);
+            EditText genderET = FindViewById<EditText>(Resource.Id.SGenderID);
+            EditText fieldET = FindViewById<EditText>(Resource.Id.SFieldID);
+            EditText yearET = FindViewById<EditText>(Resource.Id.SYearID);
+
+            Button editButton = FindViewById<Button>(Resource.Id.SEdit);
+            Button saveButton = FindViewById<Button>(Resource.Id.SSave);
+
+
+            DBHelper sqlFunctions = new DBHelper(this);
+            ICursor details = sqlFunctions.getUserDetails(studentEmail, studentPass, profileType);
+
+            while (details.MoveToNext())
             {
-                Intent search = new Intent(this, typeof(SearchPage));
-                search.PutExtra("email", "a");
-                search.PutExtra("pass", "a");
-                StartActivity(search);
+                Console.WriteLine(" Value  Of Name  FROM DB  --> " + details.GetString(details.GetColumnIndexOrThrow("Name")));
+
+                nameET.Text = details.GetString(details.GetColumnIndexOrThrow("Name"));
+                collET.Text = details.GetString(details.GetColumnIndexOrThrow("College"));
+                emailET.Text = studentEmail;
+                passET.Text = studentPass;
+                ageET.Text = details.GetString(details.GetColumnIndexOrThrow("Age"));
+                contactET.Text = details.GetString(details.GetColumnIndexOrThrow("Contact"));
+                genderET.Text = details.GetString(details.GetColumnIndexOrThrow("gender"));
+                fieldET.Text = details.GetString(details.GetColumnIndexOrThrow("Field"));
+                yearET.Text = details.GetString(details.GetColumnIndexOrThrow("Year"));
+
+            }
+            editButton.Click += delegate
+            {
+                nameET.Enabled = true;
+                collET.Enabled = true;
+                emailET.Enabled = true;
+                passET.Enabled = true;
+                ageET.Enabled = true;
+                contactET.Enabled = true;
+                genderET.Enabled = true;
+                fieldET.Enabled = true;
+                yearET.Enabled = true;
+                editButton.Enabled = false;
+                editButton.Visibility = ViewStates.Invisible;
+                saveButton.Enabled = true;
+                saveButton.Visibility = ViewStates.Visible;
             };
-        // Create your application here
-       /*private const string ColumnName = "Name";
-        private const string ColumnPwd = "Password";
-        private const string ColumnEmail = "Email";
-        private const string ColumnAge = "Age";
-        private const string ColumnGender = "gender";
-        private const string ColumnContact = "Contact";
-        //Student
-        private const string ColumnCollege = "College";
-        private const string ColumnYear = "Year";
-        private const string ColumnField = "Field";*/
+            saveButton.Click += delegate
+            {
+                nameET.Enabled = false;
+                collET.Enabled = false;
+                emailET.Enabled = false;
+                passET.Enabled = false;
+                ageET.Enabled = false;
+                contactET.Enabled = false;
+                genderET.Enabled = false;
+                fieldET.Enabled = false;
+                yearET.Enabled = false;
+                editButton.Enabled = true;
+                editButton.Visibility = ViewStates.Visible;
+                saveButton.Enabled = false;
+                saveButton.Visibility = ViewStates.Invisible;
+            };
+
+
+        }
+        private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spinner = (Spinner)sender;
+
+            if ((e.Position) == 1)
+            {
+                Intent searchIntent = new Intent(this, typeof(SearchPage));
+
+                StartActivity(searchIntent);
+            } else if ((e.Position) == 2)
+                {
+                    Intent favIntent = new Intent(this, typeof(favouriteTeacher));
+                    StartActivity(favIntent);
+                }
+            else
+            {
+                Toast.MakeText(this, "Page already open", ToastLength.Long).Show();
+
+            }
         }
     }
 }

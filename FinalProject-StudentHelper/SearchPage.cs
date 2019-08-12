@@ -23,12 +23,25 @@ namespace FinalProject_StudentHelper
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Search);
-            Button favourite = FindViewById<Button>(Resource.Id.advancedSearch);
+
+            //spinner
+           /* Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner1);
+
+            spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            var adapter = ArrayAdapter.CreateFromResource(
+                    this, Resource.Array.planets_array, Android.Resource.Layout.SimpleSpinnerItem);
+
+            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            spinner.Adapter = adapter;
+            */
+
+    /*        Button favourite = FindViewById<Button>(Resource.Id.advancedSearch);
             favourite.Click += delegate
             {
                 Intent fav = new Intent(this, typeof(favouriteTeacher));
                 StartActivity(fav);
             };
+            */
             DBHelper sqlFunctions = new DBHelper(this);
             ICursor details = sqlFunctions.searchResult("Name", "");
 
@@ -91,6 +104,26 @@ namespace FinalProject_StudentHelper
             sqlFunctions.insertValueFav(myValue);
            // var myValue = movieArray[indexValue];
            // System.Console.WriteLine("Value is \n\n " + myValue);
+        }
+        private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spinner = (Spinner)sender;
+
+            if ((e.Position) == 0)
+            {
+                Intent profileIntent = new Intent(this, typeof(studentProfile));
+                StartActivity(profileIntent);
+            }
+            else if ((e.Position) == 2)
+            {
+                Intent favIntent = new Intent(this, typeof(favouriteTeacher));
+                StartActivity(favIntent);
+            }
+            else
+            {
+                Toast.MakeText(this, "Page already open", ToastLength.Long).Show();
+
+            }
         }
     }
 }

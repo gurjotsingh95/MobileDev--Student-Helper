@@ -27,6 +27,7 @@
             android:layout_marginLeft = "-30dp" >
 
             <EditText
+                android:id ="@+id/Sname"
                 android:paddingLeft="19dp"
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
@@ -37,6 +38,7 @@
                 android:background="@drawable/myprofiletext"   
             />
             <EditText
+                android:id ="@+id/Sschool"
                 android:layout_marginTop = "8dp"
                 android:paddingLeft="15dp"
                 android:layout_width="160dp"
@@ -195,14 +197,15 @@
                 android:textStyle="bold"   
                 android:visibility = "invisible"   
             />
-            <Button
-                android:layout_below="@id/SFieldID"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-            android:id="@+id/searchPage"
-            android:background="#000"/>
+
         </RelativeLayout>
     </ScrollView>
+<Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/planet_prompt"
+    />
 </LinearLayout>
       
     
