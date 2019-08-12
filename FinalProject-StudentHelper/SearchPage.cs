@@ -33,7 +33,6 @@ namespace FinalProject_StudentHelper
             {             
                 myUserList.Add(new UserObject(details.GetString(details.GetColumnIndexOrThrow("Name")), details.GetString(details.GetColumnIndexOrThrow("Email")), 3));
             }
-
             myList = FindViewById<ListView>(Resource.Id.listViewID);
 
             var myAdapter = new MyCustomAdapter(this, myUserList);
