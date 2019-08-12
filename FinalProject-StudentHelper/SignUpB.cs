@@ -131,6 +131,8 @@ namespace FinalProject_StudentHelper
                 else
                 {
                     sqlFunctions.insertValueTeacher(userName, passWord, eMail, age, gender, contact, subject1Value, subject2Value, exp, biography, individualSess, groupSess, homeTutorValue, true);
+                    Intent login = new Intent(this, typeof(MainActivity));
+                    StartActivity(login);
                 }
             };
             registerStudentButton.Click += delegate {

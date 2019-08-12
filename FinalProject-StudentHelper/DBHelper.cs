@@ -123,5 +123,14 @@ namespace FinalProject_StudentHelper
                 return false;
             }
         }
+
+        public ICursor getUserDetails(string enteredEmail, string enteredPassword, string tableName)
+        {
+            string loginValidationQuery = "Select * from " + tableName + " where " + ColumnEmail + "=" + "'" + enteredEmail + "'"
+                + " AND " + ColumnPwd + "=" + "'" + enteredPassword + "'";
+
+            ICursor result = myDBObj.RawQuery(loginValidationQuery, null);
+            return result;
+        }
     }
 }

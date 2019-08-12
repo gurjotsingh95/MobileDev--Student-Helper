@@ -41,13 +41,24 @@ namespace FinalProject_StudentHelper
                 var eMailEntered = (myView.FindViewById<EditText>(Resource.Id.userNameID)).Text;
                 var passWordEntered = (myView.FindViewById<EditText>(Resource.Id.passwordID)).Text;
                 Boolean loginVerified = sqlfunctions.LoginValidation(eMailEntered, passWordEntered, loginTo);
-                if(loginVerified)
+                if(loginVerified && (loginTo == "Teacher"))
                 {
-                    Intent teacherProfile = new Intent();
+                    Intent teacherProfile = new Intent(Context, typeof(teachProfile));
+                    teacherProfile.PutExtra("userEmail", eMailEntered);
+                    teacherProfile.PutExtra("password", passWordEntered);
+                    teacherProfile.PutExtra("loginAs", loginTo);
+                    StartActivity(teacherProfile);
                 }
-                else
+                else if(loginVerified && (loginTo=="Student"))
                 {
-                    Intent studentProfile = new Intent();
+                    Intent studentProfile = new Intent(Context, typeof(studentProfile));
+                    studentProfile.PutExtra("userEmail", eMailEntered);
+                    studentProfile.PutExtra("password", passWordEntered);
+                    studentProfile.PutExtra("loginAs", loginTo);
+                    StartActivity(studentProfile);
+                } else
+                {
+                    Toast.MakeText(Context, "Incorrect Username/Password combination", ToastLength.Short).Show();
                 }
             };
 

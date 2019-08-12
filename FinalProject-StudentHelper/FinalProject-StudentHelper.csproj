@@ -66,6 +66,8 @@
     <Compile Include="SignInFragment.cs" />
     <Compile Include="SignUpB.cs" />
     <Compile Include="SignUpFragmentA.cs" />
+    <Compile Include="studentProfile.cs" />
+    <Compile Include="teachProfile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -133,9 +135,6 @@
     <AndroidResource Include="Resources\drawable\edit1.png" />
     <AndroidResource Include="Resources\drawable\edit.png" />
     <AndroidResource Include="Resources\drawable\img.jpeg" />
-    <Content Include="Resources\layout\IGNORE FILE - SignUpTabB.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <AndroidResource Include="Resources\layout\profile.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
