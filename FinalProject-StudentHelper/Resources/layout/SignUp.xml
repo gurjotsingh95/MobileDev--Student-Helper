@@ -197,10 +197,11 @@
         android:textColor="#fff"
         android:text = "One more Step..."/>
         <EditText
+            
             android:id="@+id/nameSchoolCollegeID"    
             android:layout_width="300dp"
             android:layout_height="100dp"
-            android:background="#1Affffff"
+            android:background="@drawable/myedittext"
             android:textColorHint="#A9A9A9"
             android:padding="10dp"
             android:textColor="#ffffff"
@@ -215,6 +216,7 @@
             android:orientation="horizontal">
             <RadioButton
                 android:id="@+id/radioSchoolId"
+android:textColor = "#fff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="School"
@@ -224,6 +226,7 @@
                 android:id="@+id/radioCollegeId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#fff"
                 android:layout_marginLeft="30dp"
                 android:text="College" />
         </RadioGroup>
@@ -231,7 +234,7 @@
             android:id="@+id/ClassOrYearId"
             android:layout_width="300dp"
             android:layout_height="45dp"
-            android:background="#1Affffff"
+            android:background="@drawable/myedittext"
             android:textColorHint="#A9A9A9"
             android:padding="10dp"
             android:textColor="#ffffff"
@@ -242,7 +245,7 @@
             android:id="@+id/FieldId"
             android:layout_width="300dp"
             android:layout_height="45dp"
-            android:background="#1Affffff"
+                        android:background="@drawable/myedittext"
             android:textColorHint="#A9A9A9"
             android:padding="10dp"
             android:textColor="#ffffff"

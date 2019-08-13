@@ -3203,7 +3203,7 @@ namespace FinalProject_StudentHelper
 			public const int edit1 = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int fulli1 = 2130837600;
+			public const int halfi1 = 2130837600;
 			
 			// aapt resource value: 0x7f020061
 			public const int i1 = 2130837601;

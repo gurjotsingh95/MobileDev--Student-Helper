@@ -36,7 +36,7 @@ namespace FinalProject_StudentHelper
             DBHelper sqlFunctions = new DBHelper(this);
             ICursor details = sqlFunctions.searchFavResult();
             
-            myFavList.Add(new UserObject("WELL THIS", "Is it", 4));
+            myFavList.Add(new UserObject("Gurjot", "gurjot@gmail.com", 4));
             
             while (details.MoveToNext())
             {

@@ -96,19 +96,24 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
+               android:layout_marginLeft="-15dp"
                 android:orientation="horizontal">
-                <RadioButton
+                
+                    <RadioButton
                     android:id="@+id/studentRadioId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                                        android:textColor="#fff"
                     android:text="Regiister as Teacher"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="50dp"/>
+                    
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="40dp"/>
                 <RadioButton
                     android:id="@+id/teacherRadioId"
                     android:layout_width="wrap_content"
+                                        android:textColor="#fff"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="25dp"
                     android:text="Register as Student" />
             </RadioGroup>
             <Button
