@@ -3311,23 +3311,23 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a0039
 			public const int ALT = 2131361849;
 			
-			// aapt resource value: 0x7f0a00f2
-			public const int AddSubjectButton = 2131362034;
+			// aapt resource value: 0x7f0a00f3
+			public const int AddSubjectButton = 2131362035;
 			
-			// aapt resource value: 0x7f0a00f0
-			public const int AddSubjectsLayout = 2131362032;
+			// aapt resource value: 0x7f0a00f1
+			public const int AddSubjectsLayout = 2131362033;
 			
 			// aapt resource value: 0x7f0a00c4
 			public const int AgeID = 2131361988;
 			
-			// aapt resource value: 0x7f0a00f4
-			public const int BioID = 2131362036;
+			// aapt resource value: 0x7f0a00f5
+			public const int BioID = 2131362037;
 			
 			// aapt resource value: 0x7f0a003a
 			public const int CTRL = 2131361850;
 			
-			// aapt resource value: 0x7f0a0101
-			public const int ClassOrYearId = 2131362049;
+			// aapt resource value: 0x7f0a0102
+			public const int ClassOrYearId = 2131362050;
 			
 			// aapt resource value: 0x7f0a00c6
 			public const int ContactID = 2131361990;
@@ -3338,17 +3338,17 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a00c2
 			public const int EmailID = 2131361986;
 			
-			// aapt resource value: 0x7f0a00dc
-			public const int EmailSearchID = 2131362012;
+			// aapt resource value: 0x7f0a00dd
+			public const int EmailSearchID = 2131362013;
 			
-			// aapt resource value: 0x7f0a00f3
-			public const int ExperienceID = 2131362035;
+			// aapt resource value: 0x7f0a00f4
+			public const int ExperienceID = 2131362036;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int FUNCTION = 2131361851;
 			
-			// aapt resource value: 0x7f0a0102
-			public const int FieldId = 2131362050;
+			// aapt resource value: 0x7f0a0103
+			public const int FieldId = 2131362051;
 			
 			// aapt resource value: 0x7f0a00c5
 			public const int GenderID = 2131361989;
@@ -3356,56 +3356,56 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a003c
 			public const int META = 2131361852;
 			
-			// aapt resource value: 0x7f0a00db
-			public const int NameSearchID = 2131362011;
+			// aapt resource value: 0x7f0a00dc
+			public const int NameSearchID = 2131362012;
 			
-			// aapt resource value: 0x7f0a00ec
-			public const int OneMoreStep = 2131362028;
+			// aapt resource value: 0x7f0a00ed
+			public const int OneMoreStep = 2131362029;
 			
 			// aapt resource value: 0x7f0a00c3
 			public const int PasswordID = 2131361987;
 			
-			// aapt resource value: 0x7f0a00d0
-			public const int SAgeID = 2131362000;
+			// aapt resource value: 0x7f0a00d1
+			public const int SAgeID = 2131362001;
+			
+			// aapt resource value: 0x7f0a00d4
+			public const int SCollegeID = 2131362004;
 			
 			// aapt resource value: 0x7f0a00d3
-			public const int SCollegeID = 2131362003;
-			
-			// aapt resource value: 0x7f0a00d2
-			public const int SContactID = 2131362002;
-			
-			// aapt resource value: 0x7f0a00cd
-			public const int SEdit = 2131361997;
+			public const int SContactID = 2131362003;
 			
 			// aapt resource value: 0x7f0a00ce
-			public const int SEmailID = 2131361998;
+			public const int SEdit = 2131361998;
 			
-			// aapt resource value: 0x7f0a00d5
-			public const int SFieldID = 2131362005;
+			// aapt resource value: 0x7f0a00cf
+			public const int SEmailID = 2131361999;
 			
-			// aapt resource value: 0x7f0a00d1
-			public const int SGenderID = 2131362001;
+			// aapt resource value: 0x7f0a00d6
+			public const int SFieldID = 2131362006;
+			
+			// aapt resource value: 0x7f0a00d2
+			public const int SGenderID = 2131362002;
 			
 			// aapt resource value: 0x7f0a003d
 			public const int SHIFT = 2131361853;
 			
-			// aapt resource value: 0x7f0a00cf
-			public const int SPasswordID = 2131361999;
+			// aapt resource value: 0x7f0a00d0
+			public const int SPasswordID = 2131362000;
 			
-			// aapt resource value: 0x7f0a00d6
-			public const int SSave = 2131362006;
+			// aapt resource value: 0x7f0a00d7
+			public const int SSave = 2131362007;
 			
 			// aapt resource value: 0x7f0a003e
 			public const int SYM = 2131361854;
 			
-			// aapt resource value: 0x7f0a00d4
-			public const int SYearID = 2131362004;
+			// aapt resource value: 0x7f0a00d5
+			public const int SYearID = 2131362005;
 			
 			// aapt resource value: 0x7f0a00ca
 			public const int Save = 2131361994;
 			
-			// aapt resource value: 0x7f0a00e0
-			public const int SearchEmail = 2131362016;
+			// aapt resource value: 0x7f0a00e1
+			public const int SearchEmail = 2131362017;
 			
 			// aapt resource value: 0x7f0a00cb
 			public const int Sname = 2131361995;
@@ -3413,8 +3413,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a00cc
 			public const int Sschool = 2131361996;
 			
-			// aapt resource value: 0x7f0a00f1
-			public const int SubjectsText = 2131362033;
+			// aapt resource value: 0x7f0a00f2
+			public const int SubjectsText = 2131362034;
 			
 			// aapt resource value: 0x7f0a008d
 			public const int action_bar = 2131361933;
@@ -3476,14 +3476,14 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a002e
 			public const int add = 2131361838;
 			
-			// aapt resource value: 0x7f0a00e2
-			public const int addToFav = 2131362018;
+			// aapt resource value: 0x7f0a00e3
+			public const int addToFav = 2131362019;
 			
-			// aapt resource value: 0x7f0a00d9
-			public const int advancedSearch = 2131362009;
+			// aapt resource value: 0x7f0a00da
+			public const int advancedSearch = 2131362010;
 			
-			// aapt resource value: 0x7f0a0108
-			public const int ageID = 2131362056;
+			// aapt resource value: 0x7f0a0109
+			public const int ageID = 2131362057;
 			
 			// aapt resource value: 0x7f0a007f
 			public const int alertTitle = 2131361919;
@@ -3527,8 +3527,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a009f
 			public const int browser_actions_menu_view = 2131361951;
 			
-			// aapt resource value: 0x7f0a00ed
-			public const int buttonLayout = 2131362029;
+			// aapt resource value: 0x7f0a00ee
+			public const int buttonLayout = 2131362030;
 			
 			// aapt resource value: 0x7f0a0072
 			public const int buttonPanel = 2131361906;
@@ -3542,11 +3542,11 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a0052
 			public const int center_vertical = 2131361874;
 			
-			// aapt resource value: 0x7f0a00f5
-			public const int checkGroupId = 2131362037;
-			
 			// aapt resource value: 0x7f0a00f6
-			public const int checkInvidualID = 2131362038;
+			public const int checkGroupId = 2131362038;
+			
+			// aapt resource value: 0x7f0a00f7
+			public const int checkInvidualID = 2131362039;
 			
 			// aapt resource value: 0x7f0a0086
 			public const int checkbox = 2131361926;
@@ -3563,17 +3563,17 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a0040
 			public const int collapseActionView = 2131361856;
 			
-			// aapt resource value: 0x7f0a010a
-			public const int contactID = 2131362058;
+			// aapt resource value: 0x7f0a010b
+			public const int contactID = 2131362059;
 			
 			// aapt resource value: 0x7f0a009d
 			public const int container = 2131361949;
 			
-			// aapt resource value: 0x7f0a00e3
-			public const int container1 = 2131362019;
+			// aapt resource value: 0x7f0a00e4
+			public const int container1 = 2131362020;
 			
-			// aapt resource value: 0x7f0a0104
-			public const int container2 = 2131362052;
+			// aapt resource value: 0x7f0a0105
+			public const int container2 = 2131362053;
 			
 			// aapt resource value: 0x7f0a0082
 			public const int content = 2131361922;
@@ -3617,8 +3617,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a008f
 			public const int edit_query = 2131361935;
 			
-			// aapt resource value: 0x7f0a0107
-			public const int emailID = 2131362055;
+			// aapt resource value: 0x7f0a0108
+			public const int emailID = 2131362056;
 			
 			// aapt resource value: 0x7f0a0037
 			public const int end = 2131361847;
@@ -3662,8 +3662,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a009e
 			public const int frameLayout1 = 2131361950;
 			
-			// aapt resource value: 0x7f0a0109
-			public const int genderID = 2131362057;
+			// aapt resource value: 0x7f0a010a
+			public const int genderID = 2131362058;
 			
 			// aapt resource value: 0x7f0a000a
 			public const int ghost_view = 2131361802;
@@ -3716,20 +3716,23 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a0024
 			public const int listMode = 2131361828;
 			
-			// aapt resource value: 0x7f0a00dd
-			public const int listViewID = 2131362013;
+			// aapt resource value: 0x7f0a00de
+			public const int listViewID = 2131362014;
 			
 			// aapt resource value: 0x7f0a0070
 			public const int list_item = 2131361904;
 			
-			// aapt resource value: 0x7f0a00e9
-			public const int loginBtnID = 2131362025;
+			// aapt resource value: 0x7f0a00cd
+			public const int logOut = 2131361997;
 			
-			// aapt resource value: 0x7f0a00e6
-			public const int loginType = 2131362022;
+			// aapt resource value: 0x7f0a00ea
+			public const int loginBtnID = 2131362026;
 			
-			// aapt resource value: 0x7f0a0110
-			public const int masked = 2131362064;
+			// aapt resource value: 0x7f0a00e7
+			public const int loginType = 2131362023;
+			
+			// aapt resource value: 0x7f0a0111
+			public const int masked = 2131362065;
 			
 			// aapt resource value: 0x7f0a009c
 			public const int message = 2131361948;
@@ -3749,14 +3752,14 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a002f
 			public const int multiply = 2131361839;
 			
-			// aapt resource value: 0x7f0a00de
-			public const int myImage = 2131362014;
+			// aapt resource value: 0x7f0a00df
+			public const int myImage = 2131362015;
 			
 			// aapt resource value: 0x7f0a00be
 			public const int name = 2131361982;
 			
-			// aapt resource value: 0x7f0a00fd
-			public const int nameSchoolCollegeID = 2131362045;
+			// aapt resource value: 0x7f0a00fe
+			public const int nameSchoolCollegeID = 2131362046;
 			
 			// aapt resource value: 0x7f0a00a9
 			public const int navigation_header_container = 2131361961;
@@ -3791,8 +3794,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a000b
 			public const int parent_matrix = 2131361803;
 			
-			// aapt resource value: 0x7f0a00e5
-			public const int passwordID = 2131362021;
+			// aapt resource value: 0x7f0a00e6
+			public const int passwordID = 2131362022;
 			
 			// aapt resource value: 0x7f0a0058
 			public const int pin = 2131361880;
@@ -3803,44 +3806,44 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a0007
 			public const int progress_horizontal = 2131361799;
 			
-			// aapt resource value: 0x7f0a0106
-			public const int pwdID = 2131362054;
+			// aapt resource value: 0x7f0a0107
+			public const int pwdID = 2131362055;
 			
 			// aapt resource value: 0x7f0a0087
 			public const int radio = 2131361927;
 			
-			// aapt resource value: 0x7f0a0100
-			public const int radioCollegeId = 2131362048;
-			
-			// aapt resource value: 0x7f0a00f7
-			public const int radioHomeTutorId = 2131362039;
-			
-			// aapt resource value: 0x7f0a00f9
-			public const int radioNo = 2131362041;
-			
-			// aapt resource value: 0x7f0a00fe
-			public const int radioSchoolCollegeID = 2131362046;
-			
-			// aapt resource value: 0x7f0a00ff
-			public const int radioSchoolId = 2131362047;
+			// aapt resource value: 0x7f0a0101
+			public const int radioCollegeId = 2131362049;
 			
 			// aapt resource value: 0x7f0a00f8
-			public const int radioYes = 2131362040;
+			public const int radioHomeTutorId = 2131362040;
 			
-			// aapt resource value: 0x7f0a00e1
-			public const int ratingbar = 2131362017;
+			// aapt resource value: 0x7f0a00fa
+			public const int radioNo = 2131362042;
 			
-			// aapt resource value: 0x7f0a010e
-			public const int register = 2131362062;
+			// aapt resource value: 0x7f0a00ff
+			public const int radioSchoolCollegeID = 2131362047;
 			
-			// aapt resource value: 0x7f0a0103
-			public const int registerStudent = 2131362051;
+			// aapt resource value: 0x7f0a0100
+			public const int radioSchoolId = 2131362048;
 			
-			// aapt resource value: 0x7f0a00fb
-			public const int registerTeacher = 2131362043;
+			// aapt resource value: 0x7f0a00f9
+			public const int radioYes = 2131362041;
 			
-			// aapt resource value: 0x7f0a00ea
-			public const int relativeContainer = 2131362026;
+			// aapt resource value: 0x7f0a00e2
+			public const int ratingbar = 2131362018;
+			
+			// aapt resource value: 0x7f0a010f
+			public const int register = 2131362063;
+			
+			// aapt resource value: 0x7f0a0104
+			public const int registerStudent = 2131362052;
+			
+			// aapt resource value: 0x7f0a00fc
+			public const int registerTeacher = 2131362044;
+			
+			// aapt resource value: 0x7f0a00eb
+			public const int relativeContainer = 2131362027;
 			
 			// aapt resource value: 0x7f0a0055
 			public const int right = 2131361877;
@@ -3878,14 +3881,14 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a005d
 			public const int scrollable = 2131361885;
 			
-			// aapt resource value: 0x7f0a00d8
-			public const int searchID = 2131362008;
+			// aapt resource value: 0x7f0a00d9
+			public const int searchID = 2131362009;
 			
-			// aapt resource value: 0x7f0a00df
-			public const int searchName = 2131362015;
+			// aapt resource value: 0x7f0a00e0
+			public const int searchName = 2131362016;
 			
-			// aapt resource value: 0x7f0a00da
-			public const int searchTypeRG = 2131362010;
+			// aapt resource value: 0x7f0a00db
+			public const int searchTypeRG = 2131362011;
 			
 			// aapt resource value: 0x7f0a0091
 			public const int search_badge = 2131361937;
@@ -3953,8 +3956,8 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a0073
 			public const int spacer = 2131361907;
 			
-			// aapt resource value: 0x7f0a00d7
-			public const int spinner = 2131362007;
+			// aapt resource value: 0x7f0a00d8
+			public const int spinner = 2131362008;
 			
 			// aapt resource value: 0x7f0a0008
 			public const int split_action_bar = 2131361800;
@@ -3974,26 +3977,26 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a005b
 			public const int stretch = 2131361883;
 			
-			// aapt resource value: 0x7f0a00fc
-			public const int studentLayout = 2131362044;
+			// aapt resource value: 0x7f0a00fd
+			public const int studentLayout = 2131362045;
 			
-			// aapt resource value: 0x7f0a00e8
-			public const int studentLogin = 2131362024;
+			// aapt resource value: 0x7f0a00e9
+			public const int studentLogin = 2131362025;
+			
+			// aapt resource value: 0x7f0a010d
+			public const int studentRadioId = 2131362061;
 			
 			// aapt resource value: 0x7f0a010c
-			public const int studentRadioId = 2131362060;
+			public const int studentTeacherRadioId = 2131362060;
 			
-			// aapt resource value: 0x7f0a010b
-			public const int studentTeacherRadioId = 2131362059;
-			
-			// aapt resource value: 0x7f0a00ee
-			public const int subject1 = 2131362030;
+			// aapt resource value: 0x7f0a00ef
+			public const int subject1 = 2131362031;
 			
 			// aapt resource value: 0x7f0a00c8
 			public const int subject1ID = 2131361992;
 			
-			// aapt resource value: 0x7f0a00ef
-			public const int subject2 = 2131362031;
+			// aapt resource value: 0x7f0a00f0
+			public const int subject2 = 2131362032;
 			
 			// aapt resource value: 0x7f0a00c9
 			public const int subject2ID = 2131361993;
@@ -4019,14 +4022,14 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a0020
 			public const int tag_unhandled_key_listeners = 2131361824;
 			
-			// aapt resource value: 0x7f0a00eb
-			public const int teacherLayout = 2131362027;
+			// aapt resource value: 0x7f0a00ec
+			public const int teacherLayout = 2131362028;
 			
-			// aapt resource value: 0x7f0a00e7
-			public const int teacherLogin = 2131362023;
+			// aapt resource value: 0x7f0a00e8
+			public const int teacherLogin = 2131362024;
 			
-			// aapt resource value: 0x7f0a010d
-			public const int teacherRadioId = 2131362061;
+			// aapt resource value: 0x7f0a010e
+			public const int teacherRadioId = 2131362062;
 			
 			// aapt resource value: 0x7f0a0021
 			public const int text = 2131361825;
@@ -4106,20 +4109,20 @@ namespace FinalProject_StudentHelper
 			// aapt resource value: 0x7f0a00c0
 			public const int userImage = 2131361984;
 			
-			// aapt resource value: 0x7f0a0105
-			public const int userName2 = 2131362053;
+			// aapt resource value: 0x7f0a0106
+			public const int userName2 = 2131362054;
 			
-			// aapt resource value: 0x7f0a00e4
-			public const int userNameID = 2131362020;
+			// aapt resource value: 0x7f0a00e5
+			public const int userNameID = 2131362021;
 			
-			// aapt resource value: 0x7f0a00fa
-			public const int verificationId = 2131362042;
+			// aapt resource value: 0x7f0a00fb
+			public const int verificationId = 2131362043;
 			
 			// aapt resource value: 0x7f0a001b
 			public const int view_offset_helper = 2131361819;
 			
-			// aapt resource value: 0x7f0a010f
-			public const int visible = 2131362063;
+			// aapt resource value: 0x7f0a0110
+			public const int visible = 2131362064;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int withText = 2131361859;

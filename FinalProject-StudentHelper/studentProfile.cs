@@ -48,7 +48,7 @@ namespace FinalProject_StudentHelper
 
             Button editButton = FindViewById<Button>(Resource.Id.SEdit);
             Button saveButton = FindViewById<Button>(Resource.Id.SSave);
-
+            Button logOut = FindViewById<Button>(Resource.Id.logOut);
 
             DBHelper sqlFunctions = new DBHelper(this);
             ICursor details = sqlFunctions.getUserDetails(studentEmail, studentPass, profileType);
