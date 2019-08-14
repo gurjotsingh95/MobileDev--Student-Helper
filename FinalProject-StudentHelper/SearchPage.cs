@@ -61,7 +61,11 @@ namespace FinalProject_StudentHelper
             mySearch = FindViewById<SearchView>(Resource.Id.searchID);
             //Search Events
             mySearch.QueryTextChange += mySearchMethod;
- //           favButton.Click += myItemClickMethod;
+            favButton.Click += delegate
+            {
+                Intent favT = new Intent(this, typeof(favouriteTeacher));
+                StartActivity(favT);
+            };
         }
         public void mySearchMethod(object sender, SearchView.QueryTextChangeEventArgs e)
         {
