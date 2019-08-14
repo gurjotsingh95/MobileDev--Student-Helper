@@ -110,6 +110,8 @@
                 android:layout_width="300dp"
                 android:layout_height="45dp"
                 android:enabled="false"
+                                android:background="@drawable/myprofiletext"
+
                 android:background="#1Affffff"
                 android:textColorHint="#000000"
                 android:textColor="#000000"
@@ -123,6 +125,8 @@
                 android:layout_width="300dp"
                 android:layout_height="45dp"
                 android:background="#1Affffff"
+                android:background="@drawable/myprofiletext"
+
                 android:textColorHint="#000000"
                 android:enabled="false"
                 android:textColor="#000000"
@@ -139,6 +143,8 @@
                 android:background="#1Affffff"
                 android:textColorHint="#000000"
                 android:textColor="#000000"
+                android:background="@drawable/myprofiletext"
+
                 android:layout_marginBottom="4dp"
                 android:padding="10dp"
                 android:hint="Contact"
@@ -158,9 +164,11 @@
                     android:textColorHint="#000000"
                     android:textColor="#000000"
                     android:enabled="false"
+                android:background="@drawable/myprofiletext"
+
                     android:layout_marginBottom="2dp"
                     android:padding="3dp"
-                    android:hint="Subject 1"
+                    android:hint=""
 	        />
                 <EditText
                     android:id="@+id/subject2ID"
@@ -171,9 +179,11 @@
                     android:textColorHint="#000000"
                     android:textColor="#000000"
                     android:layout_marginBottom="2dp"
+                android:background="@drawable/myprofiletext"
+
                     android:layout_marginLeft="30dp"
                     android:padding="3dp"
-                    android:hint="Subject 2"
+                    android:hint=""
 	        />
             </LinearLayout>
 

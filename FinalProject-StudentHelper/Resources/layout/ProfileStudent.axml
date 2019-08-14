@@ -112,6 +112,8 @@
                 android:layout_below = "@id/SPasswordID"
                 android:id="@+id/SAgeID"
                 android:layout_width="300dp"
+                android:background="@drawable/myprofiletext"
+
                 android:layout_height="45dp"
                 android:background="#1Affffff"
                 android:textColorHint="#000000"
@@ -124,6 +126,8 @@
                 android:layout_below="@id/SAgeID"
                 android:id="@+id/SGenderID"
                 android:layout_width="300dp"
+                android:background="@drawable/myprofiletext"
+
                 android:layout_height="45dp"
                 android:background="#1Affffff"
                 android:textColorHint="#000000"
@@ -137,6 +141,8 @@
                 android:id="@+id/SContactID"
                 android:layout_width="300dp"
                 android:layout_height="45dp"
+                android:background="@drawable/myprofiletext"
+
                 android:background="#1Affffff"
                 android:textColorHint="#000000"
                 android:textColor="#000000"
@@ -148,6 +154,8 @@
             <EditText
                 android:layout_below="@id/SContactID"
                 android:id="@+id/SCollegeID"
+                android:background="@drawable/myprofiletext"
+
                 android:layout_width="300dp"
                 android:layout_height="45dp"
                 android:background="#1Affffff"
@@ -161,6 +169,8 @@
             <EditText
                 android:layout_below="@id/SCollegeID"
                 android:id="@+id/SYearID"
+                android:background="@drawable/myprofiletext"
+
                 android:layout_width="300dp"
                 android:layout_height="45dp"
                 android:background="#1Affffff"
@@ -174,6 +184,8 @@
              <EditText
                 android:layout_below="@id/SYearID"
                 android:id="@+id/SFieldID"
+                android:background="@drawable/myprofiletext"
+
                 android:layout_width="300dp"
                 android:layout_height="45dp"
                 android:background="#1Affffff"
