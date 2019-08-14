@@ -72,7 +72,6 @@ namespace FinalProject_StudentHelper
             {
                 nameET.Enabled = true;
                 collET.Enabled = true;
-                emailET.Enabled = true;
                 passET.Enabled = true;
                 ageET.Enabled = true;
                 contactET.Enabled = true;
@@ -88,7 +87,6 @@ namespace FinalProject_StudentHelper
             {
                 nameET.Enabled = false;
                 collET.Enabled = false;
-                emailET.Enabled = false;
                 passET.Enabled = false;
                 ageET.Enabled = false;
                 contactET.Enabled = false;
@@ -99,6 +97,11 @@ namespace FinalProject_StudentHelper
                 editButton.Visibility = ViewStates.Visible;
                 saveButton.Enabled = false;
                 saveButton.Visibility = ViewStates.Invisible;
+            };
+            logOut.Click += delegate
+            {
+                Intent LogOut = new Intent(this, typeof(MainActivity));
+                StartActivity(LogOut);
             };
 
 
