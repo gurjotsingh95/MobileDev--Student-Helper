@@ -103,17 +103,16 @@
                     android:id="@+id/studentRadioId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                                        android:textColor="#fff"
+                    android:textColor="#fff"
                     android:text="Regiister as Teacher"
-                    
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="40dp"/>
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="30dp"/>
                 <RadioButton
                     android:id="@+id/teacherRadioId"
                     android:layout_width="wrap_content"
                                         android:textColor="#fff"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="20dp"
                     android:text="Register as Student" />
             </RadioGroup>
             <Button
