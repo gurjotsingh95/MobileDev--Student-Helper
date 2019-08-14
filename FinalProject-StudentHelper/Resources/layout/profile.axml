@@ -49,6 +49,16 @@
                 android:background="@drawable/myprofiletext"
                 android:textColor = "#000000"
                 android:inputType="none|textMultiLine" />
+            <Button
+                android:id="@+id/logOutT"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:text="Log Out"
+                android:textColor="#f54e5f"
+                android:background="@drawable/advancedsearchbutton"
+                android:layout_marginTop="8dp"
+                android:textSize="20dp"  />
         </LinearLayout>
         <Refractored.Controls.CircleImageView
             android:id="@+id/userImage"

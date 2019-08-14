@@ -23,7 +23,7 @@ namespace FinalProject_StudentHelper
             var email = Intent.GetStringExtra("userEmail");
             var pass = Intent.GetStringExtra("password");
             var profileType = Intent.GetStringExtra("loginAs");
-
+            Button logOutT = FindViewById<Button>(Resource.Id.logOutT);
             Button edit = FindViewById<Button>(Resource.Id.Edit);
             Button save = FindViewById<Button>(Resource.Id.Save);
             save.Enabled = false;
@@ -58,7 +58,6 @@ namespace FinalProject_StudentHelper
             {
                 nameET.Enabled = true;
                 bioET.Enabled = true;
-                emailET.Enabled = true;
                 passET.Enabled = true;
                 ageET.Enabled = true;
                 contactET.Enabled = true;
@@ -74,7 +73,6 @@ namespace FinalProject_StudentHelper
             {
                 nameET.Enabled = false;
                 bioET.Enabled = false;
-                emailET.Enabled = false;
                 passET.Enabled = false;
                 ageET.Enabled = false;
                 contactET.Enabled = false;
@@ -85,6 +83,12 @@ namespace FinalProject_StudentHelper
                 edit.Visibility = ViewStates.Visible;
                 save.Enabled = false;
                 save.Visibility = ViewStates.Invisible;
+            };
+            logOutT.Click += delegate
+            {
+                Intent logOutteach = new Intent(this, typeof(MainActivity));
+                StartActivity(logOutteach);
+                
             };
         }
     }
