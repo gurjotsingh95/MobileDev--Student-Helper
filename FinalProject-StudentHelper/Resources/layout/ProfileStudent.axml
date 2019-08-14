@@ -213,6 +213,7 @@
         </RelativeLayout>
     </ScrollView>
 <Spinner
+        android:background="#00235c"
         android:id="@+id/spinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

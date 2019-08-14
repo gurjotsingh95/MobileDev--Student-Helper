@@ -186,7 +186,7 @@
                     android:hint=""
 	        />
             </LinearLayout>
-
+            
             <Button
                 android:layout_below = "@+id/subjectsLayout"
                 android:id="@+id/Save"
